@@ -56,8 +56,27 @@ namespace WindowsFormsApplication1
 
                 this.a = this.a + 7;
             }
-
             this.Exp(f);
+           // this.LogOschAlg(f);
+        }
+
+        private void LogOschAlg(Form1 f)
+        {            
+            for (int i = 0; i < 11; i++)
+            {
+                if (this.ProwerkaKlassa(i) < 0)
+                {
+                    foreach (List<string> ni in this.tablica)
+                    {
+                        foreach (string nu in ni)
+                        {
+                            a = 0;
+                            System.IO.File.WriteAllText(@"\Log.txt", nu);
+                        }
+                    }
+                    
+                }
+            }
         }
 
         /// <summary>
