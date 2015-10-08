@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: Необходимо добавлять комментарии к функциям в коде
+
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
