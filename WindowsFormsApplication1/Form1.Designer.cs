@@ -32,9 +32,9 @@
             this.StartPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.check = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.missing = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).BeginInit();
             this.StartPanel.SuspendLayout();
@@ -52,8 +52,7 @@
             // 
             this.StartPanel.Controls.Add(this.button2);
             this.StartPanel.Controls.Add(this.button1);
-            this.StartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StartPanel.Location = new System.Drawing.Point(0, 0);
+            this.StartPanel.Location = new System.Drawing.Point(12, 12);
             this.StartPanel.Name = "StartPanel";
             this.StartPanel.Size = new System.Drawing.Size(1617, 257);
             this.StartPanel.TabIndex = 1;
@@ -80,14 +79,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // check
             // 
-            this.button3.Location = new System.Drawing.Point(1360, 161);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(254, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Проверить";
-            this.button3.UseVisualStyleBackColor = true;
+            this.check.Location = new System.Drawing.Point(1360, 161);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(254, 23);
+            this.check.TabIndex = 2;
+            this.check.Text = "Проверить";
+            this.check.UseVisualStyleBackColor = true;
+            this.check.Click += new System.EventHandler(this.check_Click);
             // 
             // button4
             // 
@@ -98,13 +98,13 @@
             this.button4.Text = "Редактировать";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // missing
             // 
-            this.textBox1.Location = new System.Drawing.Point(1360, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 127);
-            this.textBox1.TabIndex = 4;
+            this.missing.Location = new System.Drawing.Point(1360, 28);
+            this.missing.Multiline = true;
+            this.missing.Name = "missing";
+            this.missing.Size = new System.Drawing.Size(254, 127);
+            this.missing.TabIndex = 4;
             // 
             // label1
             // 
@@ -119,12 +119,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1617, 257);
+            this.ClientSize = new System.Drawing.Size(1642, 276);
             this.Controls.Add(this.StartPanel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.missing);
             this.Controls.Add(this.Tabl);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.button4);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -141,10 +141,10 @@
         private System.Windows.Forms.Panel StartPanel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button check;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox missing;
 
     }
 }

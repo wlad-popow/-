@@ -52,5 +52,11 @@ namespace WindowsFormsApplication1
                 Toggle();
             }
         }
+
+        private void check_Click(object sender, EventArgs e)
+        {
+            missing miss = new missing();
+            miss.inp(missing.Text);
+        }
     }
 }
