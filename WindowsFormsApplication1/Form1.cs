@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        missing miss = new missing();
 
         public bool Spanel {
             get { return StartPanel.Visible; }
@@ -55,8 +56,19 @@ namespace WindowsFormsApplication1
 
         private void check_Click(object sender, EventArgs e)
         {
-            missing miss = new missing();
             miss.inp(missing.Text);
+        }
+
+        private void missing_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                if (miss.inp(missing.Text) == 1)
+                {
+                    missing_teachers.Text += missing.Text + "\r\n";
+                }
+                missing.Text = "";
+            }
         }
     }
 }

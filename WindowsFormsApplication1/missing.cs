@@ -10,22 +10,30 @@ namespace WindowsFormsApplication1
 {
     class missing
     {
-        public void inp(string text)
-    {
         List<string> ss = new List<string>();
-        string s = "";
-        Form1 f = new Form1();
-        for (int i = 0; i < text.Length; i++)
+        public int inp(string text)
+    {
+        int kol=0,flag=1;
+        foreach(string g in ss)
         {
-            if (text[i] == '\r')
+            if (g.Length == text.Length)
             {
-                i++;
-                ss.Add(s);
-                s = "";
+                for (int i = 0; i < g.Length; i++)
+                {
+                    if (g[i] == text[i])
+                        kol++;
+                }
+                if (kol == g.Length)
+                {
+                    ss.Remove(text);
+                    flag = 0;
+                    break;
+                }
+                kol = 0;
             }
-            else
-            s += text[i];
         }
+        ss.Add(text);
+        return flag;
             //Console.WriteLine(s);
     }
     }

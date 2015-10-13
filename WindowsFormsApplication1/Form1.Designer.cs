@@ -36,6 +36,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.missing = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.missing_teachers = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).BeginInit();
             this.StartPanel.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             this.StartPanel.Controls.Add(this.button2);
             this.StartPanel.Controls.Add(this.button1);
-            this.StartPanel.Location = new System.Drawing.Point(12, 12);
+            this.StartPanel.Location = new System.Drawing.Point(12, 316);
             this.StartPanel.Name = "StartPanel";
             this.StartPanel.Size = new System.Drawing.Size(1617, 257);
             this.StartPanel.TabIndex = 1;
@@ -101,25 +102,34 @@
             // missing
             // 
             this.missing.Location = new System.Drawing.Point(1360, 28);
-            this.missing.Multiline = true;
             this.missing.Name = "missing";
-            this.missing.Size = new System.Drawing.Size(254, 127);
+            this.missing.Size = new System.Drawing.Size(254, 20);
             this.missing.TabIndex = 4;
+            this.missing.KeyDown += new System.Windows.Forms.KeyEventHandler(this.missing_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1360, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 13);
+            this.label1.Size = new System.Drawing.Size(203, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Отсутствующие преподаватели";
+            this.label1.Text = "введи отсутствующего преподавателя";
+            // 
+            // missing_teachers
+            // 
+            this.missing_teachers.AutoSize = true;
+            this.missing_teachers.Location = new System.Drawing.Point(1360, 51);
+            this.missing_teachers.Name = "missing_teachers";
+            this.missing_teachers.Size = new System.Drawing.Size(0, 13);
+            this.missing_teachers.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1642, 276);
+            this.ClientSize = new System.Drawing.Size(1695, 623);
+            this.Controls.Add(this.missing_teachers);
             this.Controls.Add(this.StartPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.missing);
@@ -145,6 +155,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox missing;
+        private System.Windows.Forms.Label missing_teachers;
 
     }
 }
