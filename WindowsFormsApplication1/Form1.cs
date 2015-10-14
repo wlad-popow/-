@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         missing miss = new missing();
+        input input = new input();
 
         public bool Spanel {
             get { return StartPanel.Visible; }
@@ -26,8 +27,8 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
 
-            Tabl.ColumnCount = 11;
-            Tabl.RowCount = 7;
+            Tabl.ColumnCount = 13;
+            Tabl.RowCount = 35;
 
             Spanel = true;
         }
@@ -35,6 +36,7 @@ namespace WindowsFormsApplication1
         public void Toggle()
         {
             Spanel = false;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,14 +46,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                System.IO.StreamReader sr = new
-                   System.IO.StreamReader(openFileDialog1.FileName);
-                sr.Close();
-                Toggle();
-            }
+            input.inp(this);
         }
 
         private void check_Click(object sender, EventArgs e)

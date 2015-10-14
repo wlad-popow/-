@@ -43,17 +43,20 @@
             // 
             // Tabl
             // 
+            this.Tabl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Tabl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Tabl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Tabl.Location = new System.Drawing.Point(12, 12);
             this.Tabl.Name = "Tabl";
-            this.Tabl.Size = new System.Drawing.Size(1342, 201);
+            this.Tabl.Size = new System.Drawing.Size(1181, 251);
             this.Tabl.TabIndex = 0;
             // 
             // StartPanel
             // 
             this.StartPanel.Controls.Add(this.button2);
             this.StartPanel.Controls.Add(this.button1);
-            this.StartPanel.Location = new System.Drawing.Point(12, 316);
+            this.StartPanel.Location = new System.Drawing.Point(12, 12);
             this.StartPanel.Name = "StartPanel";
             this.StartPanel.Size = new System.Drawing.Size(1617, 257);
             this.StartPanel.TabIndex = 1;
@@ -128,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1695, 623);
+            this.ClientSize = new System.Drawing.Size(1641, 275);
             this.Controls.Add(this.missing_teachers);
             this.Controls.Add(this.StartPanel);
             this.Controls.Add(this.label1);
@@ -147,7 +150,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView Tabl;
         private System.Windows.Forms.Panel StartPanel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -156,6 +158,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox missing;
         private System.Windows.Forms.Label missing_teachers;
+        public System.Windows.Forms.DataGridView Tabl;
 
     }
 }
