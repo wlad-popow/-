@@ -1,0 +1,7 @@
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\bin\Debug\UnitTest.dll
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\bin\Debug\UnitTest.pdb
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\obj\Debug\UnitTest.dll
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\obj\Debug\UnitTest.pdb
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\bin\Debug\WindowsFormsApplication1.exe
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\bin\Debug\WindowsFormsApplication1.pdb
