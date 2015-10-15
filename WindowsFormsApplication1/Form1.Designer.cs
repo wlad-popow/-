@@ -140,7 +140,7 @@
             this.Controls.Add(this.check);
             this.Controls.Add(this.button4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Расписание";
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).EndInit();
             this.StartPanel.ResumeLayout(false);
             this.ResumeLayout(false);
