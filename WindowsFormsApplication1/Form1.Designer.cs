@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Tabl = new System.Windows.Forms.DataGridView();
             this.StartPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -139,8 +140,9 @@
             this.Controls.Add(this.Tabl);
             this.Controls.Add(this.check);
             this.Controls.Add(this.button4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Расписание1";
+            this.Text = "Расписание";
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).EndInit();
             this.StartPanel.ResumeLayout(false);
             this.ResumeLayout(false);
