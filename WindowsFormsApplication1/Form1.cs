@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
     {
         missing miss = new missing();
         input input = new input();
+        tabl t = new tabl();
 
         public bool Spanel {
             get { return StartPanel.Visible; }
@@ -52,6 +53,7 @@ namespace WindowsFormsApplication1
         private void check_Click(object sender, EventArgs e)
         {
             miss.inp(missing.Text);
+            t.inp(this);
         }
 
         private void missing_KeyDown(object sender, KeyEventArgs e)
@@ -64,6 +66,11 @@ namespace WindowsFormsApplication1
                 }
                 missing.Text = "";
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

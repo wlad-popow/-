@@ -57,9 +57,10 @@
             // 
             this.StartPanel.Controls.Add(this.button2);
             this.StartPanel.Controls.Add(this.button1);
-            this.StartPanel.Location = new System.Drawing.Point(12, 12);
+            this.StartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StartPanel.Location = new System.Drawing.Point(0, 0);
             this.StartPanel.Name = "StartPanel";
-            this.StartPanel.Size = new System.Drawing.Size(1617, 257);
+            this.StartPanel.Size = new System.Drawing.Size(1641, 275);
             this.StartPanel.TabIndex = 1;
             // 
             // button2
@@ -143,6 +144,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Расписание";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).EndInit();
             this.StartPanel.ResumeLayout(false);
             this.ResumeLayout(false);
