@@ -5,3 +5,12 @@ c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1
 c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\obj\Debug\UnitTest.pdb
 c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\bin\Debug\WindowsFormsApplication1.exe
 c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\UnitTest\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\ClassLibrary1.dll
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\ClassLibrary1.pdb
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.pdb

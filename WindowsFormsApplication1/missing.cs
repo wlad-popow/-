@@ -8,10 +8,10 @@ using WindowsFormsApplication1;
 
 namespace WindowsFormsApplication1
 {
-    class missing
+    public class missing
     {
         test_match t = new test_match();
-        List<string> ss = new List<string>();
+        public List<string> ss = new List<string>();
         public int inp(string text)
     {
             int flag=1;

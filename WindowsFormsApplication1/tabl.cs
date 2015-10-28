@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class tabl
+    public class tabl
     {
-        List<string> all_lessons = new List<string>();
+        public List<string> all_lessons = new List<string>();
         test_match t = new test_match();
 
         public void inp(Form1 f)

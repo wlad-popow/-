@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class test_match
+    public class test_match
     {
         public bool testMatch(List<string> a, string b)
         {

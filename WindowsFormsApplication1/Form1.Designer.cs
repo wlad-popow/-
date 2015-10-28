@@ -50,15 +50,14 @@
             this.Tabl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Tabl.Location = new System.Drawing.Point(12, 12);
             this.Tabl.Name = "Tabl";
-            this.Tabl.Size = new System.Drawing.Size(1181, 251);
+            this.Tabl.Size = new System.Drawing.Size(1181, 380);
             this.Tabl.TabIndex = 0;
             // 
             // StartPanel
             // 
             this.StartPanel.Controls.Add(this.button2);
             this.StartPanel.Controls.Add(this.button1);
-            this.StartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StartPanel.Location = new System.Drawing.Point(0, 0);
+            this.StartPanel.Location = new System.Drawing.Point(41, 269);
             this.StartPanel.Name = "StartPanel";
             this.StartPanel.Size = new System.Drawing.Size(1641, 275);
             this.StartPanel.TabIndex = 1;
@@ -133,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1641, 275);
+            this.ClientSize = new System.Drawing.Size(1683, 404);
             this.Controls.Add(this.missing_teachers);
             this.Controls.Add(this.StartPanel);
             this.Controls.Add(this.label1);
