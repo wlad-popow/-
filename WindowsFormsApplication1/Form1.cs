@@ -72,5 +72,16 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+
+        private void tabl_znach_MouseDown(object sender, MouseEventArgs e)
+        {
+            t.spis(this);
+        }
+
+        private void del_Click(object sender, EventArgs e)
+        {
+            t.dell(this);
+        }
     }
 }

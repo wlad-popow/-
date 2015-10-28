@@ -19,9 +19,47 @@ namespace WindowsFormsApplication1
                 {
                     t.testMatch(all_lessons, f.Tabl[i, j].Value.ToString());
                     all_lessons.Add(f.Tabl[i, j].Value.ToString());
-                    Console.WriteLine(f.Tabl[i, j].Value.ToString());
+                    //Console.WriteLine(f.Tabl[i, j].Value.ToString());
                 }
             }
+        }
+        public void spis(Form1 f)
+        {
+            foreach (string a in all_lessons)
+            {
+                f.tabl_znach.Items.Add(a);
+            }
+        }
+
+        public void dell(Form1 f)
+        {
+            string s="";
+
+            if (f.tabl_znach.SelectedItem != null)
+                s = f.tabl_znach.SelectedItem.ToString();
+            else
+                return;
+            
+            for (int i = 0; i < f.Tabl.RowCount; i++)
+            {
+                for (int j = 0; j < f.Tabl.ColumnCount; j++)
+                {
+                    if (f.Tabl[j, i].Value != null)
+                    {
+                        if (s == f.Tabl[j, i].Value.ToString())
+                        {
+                            f.Tabl[j, i].Value = "";
+                        }
+                    }
+                }
+            }
+
+            s = "";            
+            all_lessons.Remove(f.tabl_znach.SelectedItem.ToString());
+            f.missing_teachers.Text += f.tabl_znach.SelectedItem.ToString() + "\r\n";
+            f.tabl_znach.SelectedItem = "";
+            f.tabl_znach.Items.Clear();
+            this.spis(f);
         }
     }
 }
