@@ -42,8 +42,7 @@ namespace UnitTest
             for (int i = 3; i < 11; i++ )
             {
                 Assert.AreEqual(f.Tabl[2, 1], f.Tabl[i, 1]);
-            }
-            
+            }            
         }
     }
 }

@@ -40,6 +40,7 @@
             this.missing_teachers = new System.Windows.Forms.Label();
             this.tabl_znach = new System.Windows.Forms.ComboBox();
             this.del = new System.Windows.Forms.Button();
+            this.klass_nom = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).BeginInit();
             this.StartPanel.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +89,7 @@
             // 
             // check
             // 
-            this.check.Location = new System.Drawing.Point(1360, 161);
+            this.check.Location = new System.Drawing.Point(1199, 81);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(254, 23);
             this.check.TabIndex = 2;
@@ -98,7 +99,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1360, 190);
+            this.button4.Location = new System.Drawing.Point(1199, 110);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(254, 23);
             this.button4.TabIndex = 3;
@@ -107,7 +108,7 @@
             // 
             // missing
             // 
-            this.missing.Location = new System.Drawing.Point(1199, 246);
+            this.missing.Location = new System.Drawing.Point(1202, 243);
             this.missing.Name = "missing";
             this.missing.Size = new System.Drawing.Size(254, 20);
             this.missing.TabIndex = 4;
@@ -116,7 +117,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1199, 230);
+            this.label1.Location = new System.Drawing.Point(1202, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 13);
             this.label1.TabIndex = 5;
@@ -142,7 +143,7 @@
             // 
             // del
             // 
-            this.del.Location = new System.Drawing.Point(1363, 119);
+            this.del.Location = new System.Drawing.Point(1202, 39);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(88, 27);
             this.del.TabIndex = 8;
@@ -150,11 +151,21 @@
             this.del.UseVisualStyleBackColor = true;
             this.del.Click += new System.EventHandler(this.del_Click);
             // 
+            // klass_nom
+            // 
+            this.klass_nom.Location = new System.Drawing.Point(1332, 12);
+            this.klass_nom.Name = "klass_nom";
+            this.klass_nom.Size = new System.Drawing.Size(100, 20);
+            this.klass_nom.TabIndex = 9;
+            this.klass_nom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.klass_nom_KeyDown);
+            this.klass_nom.MouseEnter += new System.EventHandler(this.klass_nom_MouseEnter);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1683, 404);
+            this.Controls.Add(this.klass_nom);
             this.Controls.Add(this.del);
             this.Controls.Add(this.tabl_znach);
             this.Controls.Add(this.missing_teachers);
@@ -188,6 +199,7 @@
         public System.Windows.Forms.ComboBox tabl_znach;
         private System.Windows.Forms.Button del;
         public System.Windows.Forms.Label missing_teachers;
+        private System.Windows.Forms.TextBox klass_nom;
 
     }
 }

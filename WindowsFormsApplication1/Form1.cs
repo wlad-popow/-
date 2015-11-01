@@ -83,5 +83,19 @@ namespace WindowsFormsApplication1
         {
             t.dell(this);
         }
+
+        private void klass_nom_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip to = new ToolTip();
+            to.SetToolTip(klass_nom,"Введите номера классов через запятую.");
+            
+        }
+
+        private void klass_nom_KeyDown(object sender, KeyEventArgs e)
+        {
+            t.dell(this);
+            klass_nom.Text = "";
+            
+        }
     }
 }

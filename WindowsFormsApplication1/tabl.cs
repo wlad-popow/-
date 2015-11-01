@@ -61,5 +61,15 @@ namespace WindowsFormsApplication1
             f.tabl_znach.Items.Clear();
             this.spis(f);
         }
+
+        private int klass (string s)
+        {
+            s.Split(',', '.');
+            for (int i=0; i < s.Length; i++)
+            {
+                
+            }
+            return 0;
+        }
     }
 }
