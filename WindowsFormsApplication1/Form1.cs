@@ -116,6 +116,11 @@ namespace WindowsFormsApplication1
                input.inp(this); 
         }
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
 
 
     }
