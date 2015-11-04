@@ -220,6 +220,7 @@
             this.checkBox3.TabIndex = 13;
             this.checkBox3.Text = "Среда";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -231,6 +232,7 @@
             this.checkBox4.TabIndex = 14;
             this.checkBox4.Text = "Четверг";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -242,6 +244,7 @@
             this.checkBox5.TabIndex = 15;
             this.checkBox5.Text = "Пятница";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // label2
             // 
