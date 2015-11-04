@@ -18,12 +18,12 @@ namespace WindowsFormsApplication1
         input input = new input();
         tabl t = new tabl();
 
-        public bool Spanel {
-            get { return StartPanel.Visible; }
-        set{
-            StartPanel.Visible = value;
-        }
-        }
+      //  public bool Spanel {
+       //     get { return StartPanel.Visible; }
+      //  set{
+       //     StartPanel.Visible = value;
+       // }
+       // }
         public Form1()
         {
             InitializeComponent();
@@ -31,23 +31,13 @@ namespace WindowsFormsApplication1
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 35;
 
-            Spanel = true;
+            //Spanel = true;
         }
 
         public void Toggle()
         {
-            Spanel = false;
+          //  Spanel = false;
             this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Toggle();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            input.inp(this);
         }
 
         private void check_Click(object sender, EventArgs e)
@@ -96,6 +86,11 @@ namespace WindowsFormsApplication1
             t.dell(this);
             klass_nom.Text = "";
             
+        }
+
+        private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            input.inp(this);
         }
     }
 }

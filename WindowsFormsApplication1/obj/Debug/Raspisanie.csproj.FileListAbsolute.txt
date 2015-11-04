@@ -27,3 +27,14 @@ C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\WindowsFormsApp
 C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
 C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\bin\Debug\ClassLibrary1.dll
 C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\ClassLibrary1.dll
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\ClassLibrary1.pdb
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\Raspisanie.csprojResolveAssemblyReference.cache
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
