@@ -95,5 +95,24 @@ namespace WindowsFormsApplication1
             Toggle();
         }
 
+        int  b;
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked){
+                b = 8;
+                for (int i = 1; i < b; i++)
+                {
+                    for (int j = 0; j < 13; j++)
+                    {
+                        Tabl[j, i].Value = "";
+                    }
+                }}
+            else
+               input.inp(this); 
+        }
+
+
+
     }
 }
