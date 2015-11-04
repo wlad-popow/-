@@ -58,10 +58,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
 
 
         private void tabl_znach_MouseDown(object sender, MouseEventArgs e)
@@ -92,5 +89,11 @@ namespace WindowsFormsApplication1
         {
             input.inp(this);
         }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Toggle();
+        }
+
     }
 }

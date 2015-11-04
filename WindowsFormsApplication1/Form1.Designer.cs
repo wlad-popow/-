@@ -49,8 +49,9 @@
             // 
             // Tabl
             // 
-            this.Tabl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Tabl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Tabl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Tabl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Tabl.Location = new System.Drawing.Point(12, 39);
@@ -60,6 +61,7 @@
             // 
             // check
             // 
+            this.check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.check.Location = new System.Drawing.Point(1072, 99);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(254, 23);
@@ -70,6 +72,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Location = new System.Drawing.Point(1072, 128);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(254, 23);
@@ -79,6 +82,7 @@
             // 
             // missing
             // 
+            this.missing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.missing.Location = new System.Drawing.Point(1072, 185);
             this.missing.Name = "missing";
             this.missing.Size = new System.Drawing.Size(254, 20);
@@ -87,6 +91,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1072, 169);
             this.label1.Name = "label1";
@@ -96,14 +101,16 @@
             // 
             // missing_teachers
             // 
+            this.missing_teachers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.missing_teachers.AutoSize = true;
-            this.missing_teachers.Location = new System.Drawing.Point(1199, 39);
+            this.missing_teachers.Location = new System.Drawing.Point(1069, 211);
             this.missing_teachers.Name = "missing_teachers";
             this.missing_teachers.Size = new System.Drawing.Size(0, 13);
             this.missing_teachers.TabIndex = 6;
             // 
             // tabl_znach
             // 
+            this.tabl_znach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tabl_znach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tabl_znach.FormattingEnabled = true;
             this.tabl_znach.Location = new System.Drawing.Point(1072, 39);
@@ -114,6 +121,7 @@
             // 
             // del
             // 
+            this.del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.del.Location = new System.Drawing.Point(1072, 66);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(88, 27);
@@ -124,7 +132,8 @@
             // 
             // klass_nom
             // 
-            this.klass_nom.Location = new System.Drawing.Point(1205, 39);
+            this.klass_nom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.klass_nom.Location = new System.Drawing.Point(1199, 40);
             this.klass_nom.Name = "klass_nom";
             this.klass_nom.Size = new System.Drawing.Size(100, 20);
             this.klass_nom.TabIndex = 9;
@@ -156,6 +165,7 @@
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
             this.открытьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.открытьToolStripMenuItem.Text = "Создать...";
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem1
             // 
@@ -189,7 +199,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Расписание";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
