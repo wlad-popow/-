@@ -9,6 +9,8 @@ namespace WindowsFormsApplication1
 {
     class input
     {
+        public List<List<string>> tab = new List<List<string>>();
+
         public void inp(Form1 f)
         {
             string str, filename="";
@@ -24,6 +26,8 @@ namespace WindowsFormsApplication1
                 sr.Close();
                 f.Toggle();
             }
+            else
+                return;
            // System.Data.DataTable tb = new System.Data.DataTable();
            // string filename = openFileDialog1.FileName;
 
@@ -38,12 +42,13 @@ namespace WindowsFormsApplication1
 
             for (rCnt = 1; rCnt <= Range.Rows.Count; rCnt++)
             {
-                
-                f.Tabl.Rows.Add(1);
-                for (cCnt = 1; cCnt <= 13; cCnt++)
+                tab.Add(new List<string>());
+                //f.Tabl.Rows.Add(1);
+                for (cCnt = 1; cCnt <= Range.Columns.Count; cCnt++)
                 {
                     str = (string)(Range.Cells[rCnt, cCnt] as Microsoft.Office.Interop.Excel.Range).Text;
-                    f.Tabl.Rows[rCnt - 1].Cells[cCnt - 1].Value = str;
+                    //f.Tabl.Rows[rCnt - 1].Cells[cCnt - 1].Value = str;
+                    tab[rCnt-1].Add(str);
                 }
             }
             Book.Close(true, null, null);
@@ -52,6 +57,20 @@ namespace WindowsFormsApplication1
             releaseObject(Sheet);
             releaseObject(Book);
             releaseObject(ExcelApp);
+
+            int x = 0, y = 0;
+            f.Tabl.RowCount = tab.Count;
+            foreach (List<string> i in tab)
+            {
+                f.Tabl.ColumnCount = i.Count;
+                foreach (string u in i)
+                {
+                    f.Tabl.Rows[x].Cells[y].Value = u;
+                    y++;
+                }
+                y = 0;
+                x++;
+            }
         }
         private void releaseObject(object obj)
         {

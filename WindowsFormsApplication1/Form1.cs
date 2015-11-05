@@ -80,14 +80,17 @@ namespace WindowsFormsApplication1
 
         private void klass_nom_KeyDown(object sender, KeyEventArgs e)
         {
-            t.dell(this);
-            klass_nom.Text = "";
+            if (e.KeyData == Keys.Enter)
+            {
+                t.dell(this);
+                klass_nom.Text = "";
+            }
             
         }
 
         private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            input.inp(this);
+            input.inp(this);            
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -164,8 +167,5 @@ namespace WindowsFormsApplication1
             else
                 input.inp(this); 
         }
-
-
-
     }
 }

@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
         { 
         }
 
-        //престановка уроков
+        // престановка уроков
         private void perestanovka()
         { 
         }
