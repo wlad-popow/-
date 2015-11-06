@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Tabl = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Redaktor = new System.Windows.Forms.Button();
             this.missing_teachers = new System.Windows.Forms.Label();
             this.tabl_znach = new System.Windows.Forms.ComboBox();
             this.del = new System.Windows.Forms.Button();
@@ -61,15 +61,16 @@
             this.Tabl.Size = new System.Drawing.Size(816, 413);
             this.Tabl.TabIndex = 0;
             // 
-            // button4
+            // Redaktor
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(865, 255);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(254, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Редактировать";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Redaktor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Redaktor.Location = new System.Drawing.Point(865, 255);
+            this.Redaktor.Name = "Redaktor";
+            this.Redaktor.Size = new System.Drawing.Size(254, 23);
+            this.Redaktor.TabIndex = 3;
+            this.Redaktor.Text = "Редактировать";
+            this.Redaktor.UseVisualStyleBackColor = true;
+            this.Redaktor.Click += new System.EventHandler(this.Redaktor_Click);
             // 
             // missing_teachers
             // 
@@ -227,7 +228,7 @@
             this.Controls.Add(this.tabl_znach);
             this.Controls.Add(this.missing_teachers);
             this.Controls.Add(this.Tabl);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Redaktor);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -243,7 +244,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Redaktor;
         public System.Windows.Forms.DataGridView Tabl;
         public System.Windows.Forms.ComboBox tabl_znach;
         private System.Windows.Forms.Button del;

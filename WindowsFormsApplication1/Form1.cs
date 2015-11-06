@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
     {
         input input = new input();
         tabl t = new tabl();
+        algoritm alg = new algoritm();
 
       //  public bool Spanel {
        //     get { return StartPanel.Visible; }
@@ -128,6 +129,11 @@ namespace WindowsFormsApplication1
             }
             else
                 input.inp(this); 
+        }
+
+        private void Redaktor_Click(object sender, EventArgs e)
+        {
+            alg.perestanovka(this);
         }
     }
 }
