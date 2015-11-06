@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1
                 {
                     str = (string)(Range.Cells[rCnt, cCnt] as Microsoft.Office.Interop.Excel.Range).Text;
                     //f.Tabl.Rows[rCnt - 1].Cells[cCnt - 1].Value = str;
-                    tab[rCnt-1].Add(str);
+                    tab[rCnt-1].Add(str.Trim());
                 }
             }
             Book.Close(true, null, null);
