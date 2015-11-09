@@ -62,6 +62,7 @@ namespace WindowsFormsApplication1
         }
 
         int  b, a;
+
         public void ud(){
          for (; a < b; a++)
                 {
