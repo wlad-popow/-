@@ -30,8 +30,6 @@ C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\Window
 C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\ClassLibrary1.dll
-C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\bin\Debug\ClassLibrary1.pdb
 C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\Raspisanie.csprojResolveAssemblyReference.cache
 C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Zorik\Desktop\rasp\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
