@@ -30,14 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Tabl = new System.Windows.Forms.DataGridView();
-            this.check = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.missing = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Redaktor = new System.Windows.Forms.Button();
             this.missing_teachers = new System.Windows.Forms.Label();
             this.tabl_znach = new System.Windows.Forms.ComboBox();
             this.del = new System.Windows.Forms.Button();
-            this.klass_nom = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,45 +61,16 @@
             this.Tabl.Size = new System.Drawing.Size(816, 413);
             this.Tabl.TabIndex = 0;
             // 
-            // check
+            // Redaktor
             // 
-            this.check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.check.Location = new System.Drawing.Point(865, 255);
-            this.check.Name = "check";
-            this.check.Size = new System.Drawing.Size(254, 23);
-            this.check.TabIndex = 2;
-            this.check.Text = "Проверить";
-            this.check.UseVisualStyleBackColor = true;
-            this.check.Click += new System.EventHandler(this.check_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(865, 284);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(254, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Редактировать";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // missing
-            // 
-            this.missing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.missing.Location = new System.Drawing.Point(865, 341);
-            this.missing.Name = "missing";
-            this.missing.Size = new System.Drawing.Size(254, 20);
-            this.missing.TabIndex = 4;
-            this.missing.KeyDown += new System.Windows.Forms.KeyEventHandler(this.missing_KeyDown);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(865, 325);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "введи отсутствующего преподавателя";
+            this.Redaktor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Redaktor.Location = new System.Drawing.Point(865, 255);
+            this.Redaktor.Name = "Redaktor";
+            this.Redaktor.Size = new System.Drawing.Size(254, 23);
+            this.Redaktor.TabIndex = 3;
+            this.Redaktor.Text = "Редактировать";
+            this.Redaktor.UseVisualStyleBackColor = true;
+            this.Redaktor.Click += new System.EventHandler(this.Redaktor_Click);
             // 
             // missing_teachers
             // 
@@ -136,16 +103,6 @@
             this.del.UseVisualStyleBackColor = true;
             this.del.Click += new System.EventHandler(this.del_Click);
             // 
-            // klass_nom
-            // 
-            this.klass_nom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.klass_nom.Location = new System.Drawing.Point(992, 196);
-            this.klass_nom.Name = "klass_nom";
-            this.klass_nom.Size = new System.Drawing.Size(100, 20);
-            this.klass_nom.TabIndex = 9;
-            this.klass_nom.KeyDown += new System.Windows.Forms.KeyEventHandler(this.klass_nom_KeyDown);
-            this.klass_nom.MouseEnter += new System.EventHandler(this.klass_nom_MouseEnter);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -169,21 +126,21 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.открытьToolStripMenuItem.Text = "Создать...";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem1
             // 
             this.открытьToolStripMenuItem1.Name = "открытьToolStripMenuItem1";
-            this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.открытьToolStripMenuItem1.Text = "Открыть...";
             this.открытьToolStripMenuItem1.Click += new System.EventHandler(this.открытьToolStripMenuItem1_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить...";
             // 
             // checkBox1
@@ -267,15 +224,11 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.klass_nom);
             this.Controls.Add(this.del);
             this.Controls.Add(this.tabl_znach);
             this.Controls.Add(this.missing_teachers);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.missing);
             this.Controls.Add(this.Tabl);
-            this.Controls.Add(this.check);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Redaktor);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -291,15 +244,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button check;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox missing;
+        private System.Windows.Forms.Button Redaktor;
         public System.Windows.Forms.DataGridView Tabl;
         public System.Windows.Forms.ComboBox tabl_znach;
         private System.Windows.Forms.Button del;
         public System.Windows.Forms.Label missing_teachers;
-        private System.Windows.Forms.TextBox klass_nom;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;

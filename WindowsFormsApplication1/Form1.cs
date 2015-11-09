@@ -14,9 +14,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        missing miss = new missing();
         input input = new input();
         tabl t = new tabl();
+        algoritm alg = new algoritm();
 
       //  public bool Spanel {
        //     get { return StartPanel.Visible; }
@@ -39,30 +39,10 @@ namespace WindowsFormsApplication1
           //  Spanel = false;
             this.WindowState = FormWindowState.Maximized;
         }
-
-        private void check_Click(object sender, EventArgs e)
-        {
-            miss.inp(missing.Text);
-            t.inp(this);
-        }
-
-        private void missing_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                if (miss.inp(missing.Text) == 1)
-                {
-                    missing_teachers.Text += missing.Text + "\r\n";
-                }
-                missing.Text = "";
-            }
-        }
-
-
-
-
+        
         private void tabl_znach_MouseDown(object sender, MouseEventArgs e)
         {
+            t.inp(this);
             t.spis(this);
         }
 
@@ -70,24 +50,10 @@ namespace WindowsFormsApplication1
         {
             t.dell(this);
         }
-
-        private void klass_nom_MouseEnter(object sender, EventArgs e)
-        {
-            ToolTip to = new ToolTip();
-            to.SetToolTip(klass_nom,"Введите номера классов через запятую.");
-            
-        }
-
-        private void klass_nom_KeyDown(object sender, KeyEventArgs e)
-        {
-            t.dell(this);
-            klass_nom.Text = "";
-            
-        }
-
+        
         private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            input.inp(this);
+            input.inp(this);            
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -166,7 +132,9 @@ namespace WindowsFormsApplication1
                 input.inp(this); 
         }
 
-
-
+        private void Redaktor_Click(object sender, EventArgs e)
+        {
+            alg.perestanovka(this);
+        }
     }
 }
