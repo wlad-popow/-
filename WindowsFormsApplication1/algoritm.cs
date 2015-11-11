@@ -8,39 +8,74 @@ namespace WindowsFormsApplication1
 {
     class algoritm
     {
+        //TODO: сделать экспорт по проверенным классам, используя сделанные проверки сделать перестройку уроков.
+
         List<List<string>> tablica = new List<List<string>>();
         // проверка уроков на совпадение
-        static private int proverka(string s)
+        private int proverka(string s, int ur)
         {
-            
-            return 0;
+            foreach (List<string> i in tablica)
+            {                
+                if (i[ur].ToString() == s)//значит есть совпадение в строке
+                {
+                    Console.Write("walodja");
+                    return 0;
+                }
+            }
+            return 1;
         }
 
         // престановка уроков
         public void perestanovka(Form1 f)
         {
+            int ur;
             tablica_add(f);
-            for (int i = 1; i <= 11; i++)
-            { 
-                poisk(i);
+            for (int i = 0; i < 11; i++)
+            {
+                ur = poisk(i);
+                if (ur != -1)
+                {
+                    for (int j = 6; j > ur; j--)
+                    {
+                        if (tablica[i][j] != "" && proverka(tablica[i][j],ur) == 1)
+                        {
+                            tablica[i][ur] = tablica[i][j];
+                            tablica[i][j] = ""; 
+                        }
+                    }
+                }
             }
+            exp(f);
         }
 
-        static private int poisk(int klass)
+        private int poisk(int klass)
         {
-            return 0;
+            for (int i = 0; i < tablica.Count; i++ )
+            {
+                //Console.Write(i[klass].ToString() + "\r\n");
+                //string s = tablica[klass][i].ToString();
+                if (tablica[klass][i].ToString() == "")
+                {
+                    return i;
+                }
+                if (i == 7)
+                {
+                    return -1;
+                }
+            }
+            return -1;
         }
 
         private void tablica_add(Form1 f)
         {
-            for (int i = 1; i < f.Tabl.RowCount; i++)
+            for (int i = 2; i < f.Tabl.ColumnCount; i++)
             {
                 tablica.Add(new List<string>());
-                for (int j = 2; j < f.Tabl.ColumnCount; j++)
+                for (int j = 1; j < f.Tabl.RowCount; j++)
                 {
-                    if (f.Tabl[j, i].Value == null)
-                        continue;
-                    tablica[i-1].Add(f.Tabl[j, i].Value.ToString());
+                    if (f.Tabl[i, j].Value == null)
+                        f.Tabl[i, j].Value="";
+                    tablica[i-2].Add(f.Tabl[i, j].Value.ToString());
                     //tablica[i - 1].Add("wertu");
                 }
             }
@@ -48,27 +83,13 @@ namespace WindowsFormsApplication1
 
         private void exp(Form1 f)
         {
-            // удалить содержимое ячеек
-            for (int i = 1; i < f.Tabl.RowCount; i++)
-            {
-                for (int j = 2; j < f.Tabl.ColumnCount; j++)
-                {
-                    f.Tabl[j, i].Value = "";
-                }
-            }
             // вывести отредактированное расписание
-            int x = 0, y = 0;
-            f.Tabl.RowCount = tablica.Count;
-            foreach (List<string> i in tablica)
+            for (int i = 2; i < f.Tabl.ColumnCount; i++)
             {
-                f.Tabl.ColumnCount = i.Count;
-                foreach (string u in i)
+                for (int j = 1; j < f.Tabl.RowCount; j++)
                 {
-                    f.Tabl.Rows[x].Cells[y].Value = u;
-                    y++;
+                    f.Tabl[i, j].Value = tablica[i-2][j-1];
                 }
-                y = 0;
-                x++;
             }
         }
 
