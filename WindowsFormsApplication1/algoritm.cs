@@ -23,13 +23,13 @@ namespace WindowsFormsApplication1
             }
             return 1;
         }
-
+        int a=0;
         // престановка уроков
         public void perestanovka(Form1 f)
         {
             int ur;
             tablica_add(f);
-
+            a = 0;
 
             for (int i = 2; i < f.Tabl.ColumnCount; i++)
             {
@@ -39,14 +39,14 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            for (int x = 0; x < 7; x++)
+            while(a<=28)
             {                
                 for (int i = 0; i < 11; i++)
                 {
                     ur = poisk(i);
                     if (ur != -1)
                     {
-                        for (int j = 6; j > ur; j--)
+                        for (int j = a+6; j > ur; j--)
                         {
                             if (tablica[i][j] != "" && proverka(tablica[i][j], ur) == 1)
                             {
@@ -56,14 +56,15 @@ namespace WindowsFormsApplication1
                             }
                         }
                     }
-                }
+                    
+                }a = a + 7;
                 exp(f);
             }
         }
 
         private int poisk(int klass)
         {
-            for (int i = 0; i < tablica.Count; i++ )
+            for (int i = a; i < a+7; i++ )
             {
                 //Console.Write(i[klass].ToString() + "\r\n");
                 //string s = tablica[klass][i].ToString();
@@ -71,10 +72,10 @@ namespace WindowsFormsApplication1
                 {
                     return i;
                 }
-                if (i == 7)
-                {
-                    return -1;
-                }
+                //if (i == 7)
+                //{
+                //    return -1;
+                //}
             }
             return -1;
         }
