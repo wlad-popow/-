@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,12 +32,10 @@ namespace WindowsFormsApplication1
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 35;
 
-            //Spanel = true;
         }
 
         public void Toggle()
         {
-          //  Spanel = false;
             this.WindowState = FormWindowState.Maximized;
         }
         
@@ -68,10 +67,12 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 0; j < 13; j++)
                     {
-                        Tabl[j, a].Value = "";
+                        Tabl[j, a].Value = null;
                     }
                 }
         }
+
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
