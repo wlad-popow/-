@@ -178,5 +178,15 @@ namespace WindowsFormsApplication1
         {
             alg.perestanovka(this);
         }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Бетка самой лучшей программы...");
+        }
+
+        private void справкаToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Справка");
+        }
     }
 }
