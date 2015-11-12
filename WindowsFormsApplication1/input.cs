@@ -16,6 +16,9 @@ namespace WindowsFormsApplication1
             string str, filename="";
             int rCnt;
             int cCnt;
+
+            tab.Clear();
+
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)

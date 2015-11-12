@@ -18,7 +18,6 @@ namespace WindowsFormsApplication1
             {                
                 if (i[ur].ToString() == s)//значит есть совпадение в строке
                 {
-                    Console.Write("walodja");
                     return 0;
                 }
             }
@@ -30,22 +29,36 @@ namespace WindowsFormsApplication1
         {
             int ur;
             tablica_add(f);
-            for (int i = 0; i < 11; i++)
+
+
+            for (int i = 2; i < f.Tabl.ColumnCount; i++)
             {
-                ur = poisk(i);
-                if (ur != -1)
+                for (int j = 1; j < f.Tabl.RowCount; j++)
                 {
-                    for (int j = 6; j > ur; j--)
+                    f.Tabl[i, j].Value = "";
+                }
+            }
+
+            for (int x = 0; x < 7; x++)
+            {                
+                for (int i = 0; i < 11; i++)
+                {
+                    ur = poisk(i);
+                    if (ur != -1)
                     {
-                        if (tablica[i][j] != "" && proverka(tablica[i][j],ur) == 1)
+                        for (int j = 6; j > ur; j--)
                         {
-                            tablica[i][ur] = tablica[i][j];
-                            tablica[i][j] = ""; 
+                            if (tablica[i][j] != "" && proverka(tablica[i][j], ur) == 1)
+                            {
+                                tablica[i][ur] = tablica[i][j];
+                                tablica[i][j] = "";
+                                break;
+                            }
                         }
                     }
                 }
+                exp(f);
             }
-            exp(f);
         }
 
         private int poisk(int klass)
@@ -68,6 +81,7 @@ namespace WindowsFormsApplication1
 
         private void tablica_add(Form1 f)
         {
+            tablica.Clear();
             for (int i = 2; i < f.Tabl.ColumnCount; i++)
             {
                 tablica.Add(new List<string>());
@@ -76,7 +90,6 @@ namespace WindowsFormsApplication1
                     if (f.Tabl[i, j].Value == null)
                         f.Tabl[i, j].Value="";
                     tablica[i-2].Add(f.Tabl[i, j].Value.ToString());
-                    //tablica[i - 1].Add("wertu");
                 }
             }
         }
@@ -88,7 +101,11 @@ namespace WindowsFormsApplication1
             {
                 for (int j = 1; j < f.Tabl.RowCount; j++)
                 {
-                    f.Tabl[i, j].Value = tablica[i-2][j-1];
+                //    if (proverka(f.Tabl[i, j].Value.ToString(), j - 1) == 1)
+                //    {
+                //        f.Tabl[i, j].Value = tablica[i - 2][j - 1];
+                //    }
+                    f.Tabl[i, j].Value = tablica[i - 2][j - 1];
                 }
             }
         }
