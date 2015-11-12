@@ -71,18 +71,29 @@ namespace WindowsFormsApplication1
                     }
                 }
         }
-
+           private void vos(){
+               for (int i = 0; i < 13; i++)
+               {
+                   for (int j = 0; j < b; j++)
+                   {
+                       (Tabl[i, j].Value) = input.tab[j][i];
+                   }
+               }
+              
+        
+    }
 
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked){
+            if (checkBox1.Checked)
+            {
                 a = 1;
                 b = 8;
                 ud();
-               }
+            }
             else
-               input.inp(this); 
+                vos();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -94,7 +105,7 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                input.inp(this); 
+                vos(); 
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
@@ -106,7 +117,7 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                input.inp(this); 
+                vos(); 
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
@@ -118,7 +129,7 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                input.inp(this); 
+                vos(); 
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
@@ -130,7 +141,7 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                input.inp(this); 
+                vos(); 
         }
 
         private void Redaktor_Click(object sender, EventArgs e)
