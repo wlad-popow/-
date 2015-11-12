@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
             Toggle();
         }
 
-        int  b, a;
+        int  b, a,c;
 
         public void ud(){
          for (; a < b; a++)
@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1
            private void vos(){
                for (int i = 0; i < 13; i++)
                {
-                   for (int j = 0; j < b; j++)
+                   for (int j = c; j < b; j++)
                    {
                        (Tabl[i, j].Value) = input.tab[j][i];
                    }
@@ -93,7 +93,13 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                vos();
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        (Tabl[i, j].Value) = input.tab[j][i];
+                    }
+                }
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -105,7 +111,13 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                vos(); 
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 8; j < 15; j++)
+                    {
+                        (Tabl[i, j].Value) = input.tab[j][i];
+                    }
+                } 
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
@@ -117,7 +129,13 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                vos(); 
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 15; j < 22; j++)
+                    {
+                        (Tabl[i, j].Value) = input.tab[j][i];
+                    }
+                } 
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
@@ -129,7 +147,13 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                vos(); 
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 22; j < 29; j++)
+                    {
+                        (Tabl[i, j].Value) = input.tab[j][i];
+                    }
+                }
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
@@ -141,7 +165,13 @@ namespace WindowsFormsApplication1
                 ud();
             }
             else
-                vos(); 
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 29; j < 36; j++)
+                    {
+                        (Tabl[i, j].Value) = input.tab[j][i];
+                    }
+                }
         }
 
         private void Redaktor_Click(object sender, EventArgs e)
