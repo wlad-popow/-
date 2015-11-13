@@ -1,0 +1,27 @@
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Raspisanie.csprojResolveAssemblyReference.cache
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+c:\users\ragnareg\documents\visual studio 2013\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\Raspisanie.csprojResolveAssemblyReference.cache
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Ragnareg\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\Raspisanie.csprojResolveAssemblyReference.cache
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Ragnareg\Desktop\Ras\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
