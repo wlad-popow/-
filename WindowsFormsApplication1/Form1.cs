@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
     {
         Input input = new Input();
         Tabl t = new Tabl();
-        algoritm alg = new algoritm();
+        Algoritm alg = new Algoritm();
 
       //  public bool Spanel {
        //     get { return StartPanel.Visible; }
@@ -177,7 +177,7 @@ namespace WindowsFormsApplication1
 
         private void Redaktor_Click(object sender, EventArgs e)
         {
-            alg.perestanovka(this);
+            alg.Perestanovka(this);
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
