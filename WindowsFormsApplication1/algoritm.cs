@@ -10,19 +10,31 @@ namespace WindowsFormsApplication1
     {
         //TODO: сделать экспорт по проверенным классам, используя сделанные проверки сделать перестройку уроков.
 
+        /// <summary>
+        /// 
+        /// </summary>
         List<List<string>> tablica = new List<List<string>>();
         // проверка уроков на совпадение
+        /// <summary>
+        /// Выполняет функцию проверки
+        /// </summary>
+        /// <param name="s">Преподаватель</param>
+        /// <param name="ur">Номер урока</param>
+        /// <returns>Если совпадает то 0 иначе 1</returns>
         private int proverka(string s, int ur)
         {
             foreach (List<string> i in tablica)
-            {                
-                if (i[ur].ToString() == s)//значит есть совпадение в строке
+            {   
+            
+                //значит есть совпадение в строке
+                if (i[ur].ToString() == s)
                 {
                     return 0;
                 }
             }
             return 1;
         }
+
         int a=0;
         // престановка уроков
         public void perestanovka(Form1 f)
@@ -39,7 +51,7 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            while(a<=28)
+            while(a <= 28)
             {                
                 for (int i = 0; i < 11; i++)
                 {
@@ -48,7 +60,7 @@ namespace WindowsFormsApplication1
                     {
                         for (int j = a+6; j > ur; j--)
                         {
-                            if (tablica[i][j] != "" && proverka(tablica[i][j], ur) == 1)
+                            if (tablica[i][j] != "" && this.proverka(tablica[i][j], ur) == 1)
                             {
                                 tablica[i][ur] = tablica[i][j];
                                 tablica[i][j] = "";
@@ -56,8 +68,9 @@ namespace WindowsFormsApplication1
                             }
                         }
                     }
-                    
-                }a = a + 7;
+                }
+
+                a = a + 7;
                 exp(f);
             }
         }
@@ -66,6 +79,7 @@ namespace WindowsFormsApplication1
         {
             for (int i = a; i < a+7; i++ )
             {
+
                 //Console.Write(i[klass].ToString() + "\r\n");
                 //string s = tablica[klass][i].ToString();
                 if (tablica[klass][i].ToString() == "")
@@ -82,15 +96,15 @@ namespace WindowsFormsApplication1
 
         private void tablica_add(Form1 f)
         {
-            tablica.Clear();
+            this.tablica.Clear();
             for (int i = 2; i < f.Tabl.ColumnCount; i++)
             {
-                tablica.Add(new List<string>());
+                this.tablica.Add(new List<string>());
                 for (int j = 1; j < f.Tabl.RowCount; j++)
                 {
                     if (f.Tabl[i, j].Value == null)
                         f.Tabl[i, j].Value="";
-                    tablica[i-2].Add(f.Tabl[i, j].Value.ToString());
+                    this.tablica[i-2].Add(f.Tabl[i, j].Value.ToString());
                 }
             }
         }

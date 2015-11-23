@@ -29,7 +29,7 @@ namespace UnitTest
         {
             Form1 f = new Form1();
             //получить удаляемый урок
-            tabl t = new tabl();
+            Tabl t = new Tabl();
             //проверить удален ли урок
             Assert.AreEqual("",f.Tabl[5,1]);                    
         }

@@ -1,46 +1,69 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1
 {
-    public class tabl
-    {
-        public HashSet<string> all_lessons = new HashSet<string>();
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
-        public void inp(Form1 f)
+    /// <summary>
+    /// Класс работы с таблицей
+    /// </summary>
+    public class Tabl
+    {
+        /// <summary>
+        /// Список уникальных преподавателей
+        /// </summary>
+        private HashSet<string> allLessons = new HashSet<string>();
+
+        /// <summary>
+        /// Метод добавления значений в All_lessons
+        /// </summary>
+        /// <param name="f">Главная форма программы</param>        
+        public void Inp(Form1 f)
         {
             for (int i = 1; i < f.Tabl.RowCount; i++)
             {
                 for (int j = 2; j < f.Tabl.ColumnCount; j++)
                 {
-                    if (f.Tabl[j, i].Value != null && f.Tabl[j, i].Value.ToString() != "")
+                    if (f.Tabl[j, i].Value != null && f.Tabl[j, i].Value.ToString() != string.Empty)
                     {
-                    all_lessons.Add(f.Tabl[j, i].Value.ToString());
+                        this.allLessons.Add(f.Tabl[j, i].Value.ToString());
                     }
                 }
             }
         }
-        public void spis(Form1 f)
+
+        /// <summary>
+        /// Метод добавления значений в ComboBox
+        /// </summary>
+        /// <param name="f">Главная форма программы</param>
+        public void Spis(Form1 f)
         {
             f.tabl_znach.Items.Clear();
-            foreach (string a in all_lessons)
+            foreach (string a in this.allLessons)
             {
                 f.tabl_znach.Items.Add(a);
             }
         }
 
-        public void dell(Form1 f)
+        /// <summary>
+        /// Метод удаления содержимого ячеек схожих по значению с ComboBox
+        /// </summary>
+        /// <param name="f">Главная форма программы</param>
+        public void Dell(Form1 f)
         {
-            string s="";
+            string s = string.Empty;
 
             if (f.tabl_znach.SelectedItem != null)
+            {
                 s = f.tabl_znach.SelectedItem.ToString();
+            }
             else
+            {
                 return;
-            
+            }
+
             for (int i = 0; i < f.Tabl.RowCount; i++)
             {
                 for (int j = 0; j < f.Tabl.ColumnCount; j++)
@@ -49,26 +72,16 @@ namespace WindowsFormsApplication1
                     {
                         if (s == f.Tabl[j, i].Value.ToString())
                         {
-                            f.Tabl[j, i].Value = "";
+                            f.Tabl[j, i].Value = string.Empty;
                         }
                     }
                 }
             }
 
-            s = "";            
-            all_lessons.Remove(f.tabl_znach.SelectedItem.ToString());
+            s = string.Empty;
+            this.allLessons.Remove(f.tabl_znach.SelectedItem.ToString());
             f.missing_teachers.Text += f.tabl_znach.SelectedItem.ToString() + "\r\n";
-            f.tabl_znach.SelectedItem = "";
-        }
-
-        private int klass (string s)
-        {
-            s.Split(',', '.');
-            for (int i=0; i < s.Length; i++)
-            {
-                
-            }
-            return 0;
+            f.tabl_znach.SelectedItem = string.Empty;
         }
     }
 }

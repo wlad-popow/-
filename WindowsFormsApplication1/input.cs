@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
 
 namespace WindowsFormsApplication1
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
     class input
     {
         public List<List<string>> tab = new List<List<string>>();
 
         public void inp(Form1 f)
         {
-            string str, filename="";
+            string str, filename = "";
             int rCnt;
             int cCnt;
 
@@ -31,8 +33,8 @@ namespace WindowsFormsApplication1
             }
             else
                 return;
-           // System.Data.DataTable tb = new System.Data.DataTable();
-           // string filename = openFileDialog1.FileName;
+            // System.Data.DataTable tb = new System.Data.DataTable();
+            // string filename = openFileDialog1.FileName;
 
             Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook Book;
@@ -50,8 +52,9 @@ namespace WindowsFormsApplication1
                 for (cCnt = 1; cCnt <= Range.Columns.Count; cCnt++)
                 {
                     str = (string)(Range.Cells[rCnt, cCnt] as Microsoft.Office.Interop.Excel.Range).Text;
+
                     //f.Tabl.Rows[rCnt - 1].Cells[cCnt - 1].Value = str;
-                    tab[rCnt-1].Add(str.Trim());
+                    tab[rCnt - 1].Add(str.Trim());
                 }
             }
             Book.Close(true, null, null);
@@ -92,6 +95,6 @@ namespace WindowsFormsApplication1
                 GC.Collect();
             }
         }
-        
+
     }
 }

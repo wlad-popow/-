@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         input input = new input();
-        tabl t = new tabl();
+        Tabl t = new Tabl();
         algoritm alg = new algoritm();
 
       //  public bool Spanel {
@@ -41,13 +41,13 @@ namespace WindowsFormsApplication1
         
         private void tabl_znach_MouseDown(object sender, MouseEventArgs e)
         {
-            t.inp(this);
-            t.spis(this);
+            t.Inp(this);
+            t.Spis(this);
         }
 
         private void del_Click(object sender, EventArgs e)
         {
-            t.dell(this);
+            t.Dell(this);
         }
         
         private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -60,7 +60,8 @@ namespace WindowsFormsApplication1
             Toggle();
         }
 
-        int  b, a,c;
+        int  b, a;
+        int c = 0;
 
         public void ud(){
          for (; a < b; a++)
@@ -187,6 +188,11 @@ namespace WindowsFormsApplication1
         private void справкаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Справка");
+        }
+
+        private void файлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,3 +14,5 @@ C:\Users\Ragnareg\Desktop\Ras\UnitTest\bin\Debug\ClassLibrary1.pdb
 C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\Ragnareg\Desktop\Новая папка (2)\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Ragnareg\Desktop\Новая папка (2)\UnitTest\obj\Debug\UnitTest.dll
