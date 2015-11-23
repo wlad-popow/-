@@ -1,6 +1,4 @@
-﻿
-
-namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;
@@ -9,17 +7,27 @@ namespace WindowsFormsApplication1
     using System.Threading.Tasks;
     using System.Windows.Forms;
 
-    class input
+    /// <summary>
+    /// Класс считывания файла Excel.
+    /// </summary>
+    class Input
     {
-        public List<List<string>> tab = new List<List<string>>();
+        /// <summary>
+        /// Считанное расписание из Excel.
+        /// </summary>
+        public List<List<string>> Tab = new List<List<string>>();
 
-        public void inp(Form1 f)
+        /// <summary>
+        /// Метод считывания файла Excel в tab.
+        /// </summary>
+        /// <param name="f">Главная форма программы</param>
+        public void Inp(Form1 f)
         {
-            string str, filename = "";
-            int rCnt;
-            int cCnt;
+            string str, filename = string.Empty;
+            int rowCount;
+            int collumnCount;
 
-            tab.Clear();
+            this.Tab.Clear();
 
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
@@ -32,41 +40,39 @@ namespace WindowsFormsApplication1
                 f.Toggle();
             }
             else
-                return;
-            // System.Data.DataTable tb = new System.Data.DataTable();
-            // string filename = openFileDialog1.FileName;
-
-            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
-            Microsoft.Office.Interop.Excel._Workbook Book;
-            Microsoft.Office.Interop.Excel.Worksheet Sheet;
-            Microsoft.Office.Interop.Excel.Range Range;
-
-            Book = ExcelApp.Workbooks.Open(filename, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            Sheet = (Microsoft.Office.Interop.Excel.Worksheet)Book.Worksheets.get_Item(1);
-            Range = Sheet.UsedRange;
-
-            for (rCnt = 1; rCnt <= Range.Rows.Count; rCnt++)
             {
-                tab.Add(new List<string>());
-                //f.Tabl.Rows.Add(1);
-                for (cCnt = 1; cCnt <= Range.Columns.Count; cCnt++)
-                {
-                    str = (string)(Range.Cells[rCnt, cCnt] as Microsoft.Office.Interop.Excel.Range).Text;
+                return;
+            }
 
-                    //f.Tabl.Rows[rCnt - 1].Cells[cCnt - 1].Value = str;
-                    tab[rCnt - 1].Add(str.Trim());
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook book;
+            Microsoft.Office.Interop.Excel.Worksheet sheet;
+            Microsoft.Office.Interop.Excel.Range range;
+
+            book = excelApp.Workbooks.Open(filename, 0, true, 5, string.Empty, string.Empty, true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            sheet = (Microsoft.Office.Interop.Excel.Worksheet)book.Worksheets.get_Item(1);
+            range = sheet.UsedRange;
+
+            for (rowCount = 1; rowCount <= range.Rows.Count; rowCount++)
+            {
+                this.Tab.Add(new List<string>());
+                for (collumnCount = 1; collumnCount <= range.Columns.Count; collumnCount++)
+                {
+                    str = (string)(range.Cells[rowCount, collumnCount] as Microsoft.Office.Interop.Excel.Range).Text;
+                    this.Tab[rowCount - 1].Add(str.Trim());
                 }
             }
-            Book.Close(true, null, null);
-            ExcelApp.Quit();
 
-            releaseObject(Sheet);
-            releaseObject(Book);
-            releaseObject(ExcelApp);
+            book.Close(true, null, null);
+            excelApp.Quit();
+
+            this.ReleaseObject(sheet);
+            this.ReleaseObject(book);
+            this.ReleaseObject(excelApp);
 
             int x = 0, y = 0;
-            f.Tabl.RowCount = tab.Count;
-            foreach (List<string> i in tab)
+            f.Tabl.RowCount = this.Tab.Count;
+            foreach (List<string> i in this.Tab)
             {
                 f.Tabl.ColumnCount = i.Count;
                 foreach (string u in i)
@@ -74,11 +80,17 @@ namespace WindowsFormsApplication1
                     f.Tabl.Rows[x].Cells[y].Value = u;
                     y++;
                 }
+
                 y = 0;
                 x++;
             }
         }
-        private void releaseObject(object obj)
+
+        /// <summary>
+        /// Метод обработки исключений и очистки мусора.
+        /// </summary>
+        /// <param name="obj">Получаемый объект</param>
+        private void ReleaseObject(object obj)
         {
             try
             {
@@ -95,6 +107,5 @@ namespace WindowsFormsApplication1
                 GC.Collect();
             }
         }
-
     }
 }

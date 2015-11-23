@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        input input = new input();
+        Input input = new Input();
         Tabl t = new Tabl();
         algoritm alg = new algoritm();
 
@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
         
         private void открытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            input.inp(this);            
+            input.Inp(this);            
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
                {
                    for (int j = c; j < b; j++)
                    {
-                       (Tabl[i, j].Value) = input.tab[j][i];
+                       (Tabl[i, j].Value) = input.Tab[j][i];
                    }
                }
               
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        (Tabl[i, j].Value) = input.tab[j][i];
+                        (Tabl[i, j].Value) = input.Tab[j][i];
                     }
                 }
         }
@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 8; j < 15; j++)
                     {
-                        (Tabl[i, j].Value) = input.tab[j][i];
+                        (Tabl[i, j].Value) = input.Tab[j][i];
                     }
                 } 
         }
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 15; j < 22; j++)
                     {
-                        (Tabl[i, j].Value) = input.tab[j][i];
+                        (Tabl[i, j].Value) = input.Tab[j][i];
                     }
                 } 
         }
@@ -152,7 +152,7 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 22; j < 29; j++)
                     {
-                        (Tabl[i, j].Value) = input.tab[j][i];
+                        (Tabl[i, j].Value) = input.Tab[j][i];
                     }
                 }
         }
@@ -170,7 +170,7 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 29; j < 36; j++)
                     {
-                        (Tabl[i, j].Value) = input.tab[j][i];
+                        (Tabl[i, j].Value) = input.Tab[j][i];
                     }
                 }
         }
