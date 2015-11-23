@@ -40,10 +40,10 @@
         /// <param name="f">Главная форма программы</param>
         public void Spis(Form1 f)
         {
-            f.tabl_znach.Items.Clear();
+            f.TablZnach.Items.Clear();
             foreach (string a in this.allLessons)
             {
-                f.tabl_znach.Items.Add(a);
+                f.TablZnach.Items.Add(a);
             }
         }
 
@@ -55,9 +55,9 @@
         {
             string s = string.Empty;
 
-            if (f.tabl_znach.SelectedItem != null)
+            if (f.TablZnach.SelectedItem != null)
             {
-                s = f.tabl_znach.SelectedItem.ToString();
+                s = f.TablZnach.SelectedItem.ToString();
             }
             else
             {
@@ -79,9 +79,9 @@
             }
 
             s = string.Empty;
-            this.allLessons.Remove(f.tabl_znach.SelectedItem.ToString());
-            f.missing_teachers.Text += f.tabl_znach.SelectedItem.ToString() + "\r\n";
-            f.tabl_znach.SelectedItem = string.Empty;
+            this.allLessons.Remove(f.TablZnach.SelectedItem.ToString());
+            f.missing_teachers.Text += f.TablZnach.SelectedItem.ToString() + "\r\n";
+            f.TablZnach.SelectedItem = string.Empty;
         }
     }
 }
