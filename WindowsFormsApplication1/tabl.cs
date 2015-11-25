@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApplication1
+﻿//// Работа с таблицей
+namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;

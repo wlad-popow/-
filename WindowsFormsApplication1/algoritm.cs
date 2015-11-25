@@ -1,4 +1,5 @@
-﻿////Основные алгоритмы
+﻿//// Основные алгоритмы
+//// <copyright>All rights ignored</copyright>
 namespace WindowsFormsApplication1
 {
     using System;
@@ -10,36 +11,17 @@ namespace WindowsFormsApplication1
     /// <summary>
     /// Класс, выполняющий алгоритм создания опримального расписания.
     /// </summary>
-    class Algoritm
+    public class Algoritm
     {
-        /// <summary>
-        /// Двумерный массив, содержащий расписание, загруженное из таблици формы.
-        /// </summary>
-        private List<List<string>> tablica = new List<List<string>>();
-
-        /// <summary>
-        /// Выполняет функцию проверки
-        /// </summary>
-        /// <param name="s">Переменная преподавателя</param>
-        /// <param name="ur">Номер урока</param>
-        /// <returns>Если совпадает то 0 иначе 1</returns>
-        private int Proverka(string s, int ur)
-        {
-            foreach (List<string> i in this.tablica)
-            {
-                if (i[ur].ToString() == s)
-                {
-                    return 0;
-                }
-            }
-
-            return 1;
-        }
-
         /// <summary>
         /// Переменая пказывающая номер урока.
         /// </summary>
         private int a = 0;
+
+        /// <summary>
+        /// Двумерный массив, содержащий расписание, загруженное из таблици формы.
+        /// </summary>
+        private List<List<string>> tablica = new List<List<string>>();
 
         /// <summary>
         /// Метод перестановки уроков.
@@ -81,6 +63,25 @@ namespace WindowsFormsApplication1
                 this.a = this.a + 7;
                 this.Exp(f);
             }
+        }
+
+        /// <summary>
+        /// Выполняет функцию проверки
+        /// </summary>
+        /// <param name="s">Переменная преподавателя</param>
+        /// <param name="ur">Номер урока</param>
+        /// <returns>Если совпадает то 0 иначе 1</returns>
+        private int Proverka(string s, int ur)
+        {
+            foreach (List<string> i in this.tablica)
+            {
+                if (i[ur].ToString() == s)
+                {
+                    return 0;
+                }
+            }
+
+            return 1;
         }
 
         /// <summary>

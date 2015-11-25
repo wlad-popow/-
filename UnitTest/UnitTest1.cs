@@ -7,6 +7,9 @@ namespace UnitTest
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using WindowsFormsApplication1;
 
+    /// <summary>
+    /// Юнит тесты
+    /// </summary>
     [TestClass]
     public class UnitTest1
     {

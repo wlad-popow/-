@@ -93,7 +93,7 @@
             this.TablZnach.Name = "tabl_znach";
             this.TablZnach.Size = new System.Drawing.Size(121, 21);
             this.TablZnach.TabIndex = 7;
-            this.TablZnach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabl_znach_MouseDown);
+            this.TablZnach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tabl_znach_MouseDown);
 
             // del
             this.del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -131,13 +131,13 @@
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
             this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem.Text = "Создать...";
-            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem_Click);
 
             // открытьToolStripMenuItem1
             this.открытьToolStripMenuItem1.Name = "открытьToolStripMenuItem1";
             this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem1.Text = "Открыть...";
-            this.открытьToolStripMenuItem1.Click += new System.EventHandler(this.открытьToolStripMenuItem1_Click);
+            this.открытьToolStripMenuItem1.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem1_Click);
 
             // сохранитьToolStripMenuItem
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
@@ -173,7 +173,7 @@
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "Понедельник";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
 
             // checkBox2
             this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -184,7 +184,7 @@
             this.checkBox2.TabIndex = 12;
             this.checkBox2.Text = "Вторник";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
 
             // checkBox3
             this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -195,7 +195,7 @@
             this.checkBox3.TabIndex = 13;
             this.checkBox3.Text = "Среда";
             this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.CheckBox3_CheckedChanged);
 
             // checkBox4
             this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -206,7 +206,7 @@
             this.checkBox4.TabIndex = 14;
             this.checkBox4.Text = "Четверг";
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.CheckBox4_CheckedChanged);
 
             // checkBox5
             this.checkBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -217,7 +217,7 @@
             this.checkBox5.TabIndex = 15;
             this.checkBox5.Text = "Пятница";
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.CheckBox5_CheckedChanged);
 
             // label2
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -255,8 +255,11 @@
             this.PerformLayout();
         }
 
+        /// <summary>
+        /// Документация авто
+        /// </summary>
         #endregion
-
+        
         private System.Windows.Forms.Button Redaktor;
         public System.Windows.Forms.DataGridView Tabl;
         public System.Windows.Forms.ComboBox TablZnach;
