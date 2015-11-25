@@ -1,5 +1,8 @@
 ﻿namespace WindowsFormsApplication1
 {
+    /// <summary>
+    /// Класс формы
+    /// </summary>
     partial class Form1
     {
         /// <summary>
@@ -103,9 +106,11 @@
             this.del.Click += new System.EventHandler(this.DelClick);
 
             // menuStrip1
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
+             {
             this.файлToolStripMenuItem,
-            this.справкаToolStripMenuItem });
+            this.справкаToolStripMenuItem 
+            });
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1163, 24);
@@ -113,14 +118,14 @@
             this.menuStrip1.Text = "menuStrip1";
 
             // файлToolStripMenuItem
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] 
+            {
             this.открытьToolStripMenuItem,
             this.открытьToolStripMenuItem1,
             this.сохранитьToolStripMenuItem });
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
-            this.файлToolStripMenuItem.Click += new System.EventHandler(this.файлToolStripMenuItem_Click);
 
             // открытьToolStripMenuItem
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
@@ -151,13 +156,13 @@
             this.справкаToolStripMenuItem1.Name = "справкаToolStripMenuItem1";
             this.справкаToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
             this.справкаToolStripMenuItem1.Text = "Справка";
-            this.справкаToolStripMenuItem1.Click += new System.EventHandler(this.справкаToolStripMenuItem1_Click);
+            this.справкаToolStripMenuItem1.Click += new System.EventHandler(this.СправкаToolStripMenuItem1_Click);
 
             // оПрограммеToolStripMenuItem
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОПрограммеToolStripMenuItem_Click);
 
             // checkBox1
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));

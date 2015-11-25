@@ -1,7 +1,8 @@
-﻿namespace WindowsFormsApplication1
+﻿///Документы формы
+namespace WindowsFormsApplication1
 {
-    using Microsoft.Office.Interop.Excel;
     using System;
+    using Microsoft.Office.Interop.Excel;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Data;
@@ -37,14 +38,21 @@
 
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 35;
-
         }
 
+        /// <summary>
+        /// Метод увеличения размера окна
+        /// </summary>
         public void Toggle()
         {
             this.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Метод ввода в таблицу
+        /// </summary>
+        /// <param name="sender">Стандарт</param>
+        /// <param name="e">Стандарт</param>
         private void tabl_znach_MouseDown(object sender, MouseEventArgs e)
         {
             this.t.Inp(this);
@@ -69,6 +77,9 @@
         int b, a;
         int c = 0;
 
+        /// <summary>
+        /// Метод удаления
+        /// </summary>
         public void ud()
         {
             for (; this.a < this.b; this.a++)
@@ -79,6 +90,10 @@
                 }
             }
         }
+
+        /// <summary>
+        ///Метод восстановления по дням недели
+        /// </summary>
         private void vos()
         {
             for (int i = 0; i < 13; i++)
@@ -88,10 +103,13 @@
                     (Tabl[i, j].Value) = this.input.Tab[j][i];
                 }
             }
-
-
         }
-        
+
+        /// <summary>
+        /// Метод удаления по понедельникам
+        /// </summary>
+        /// <param name="sender">Стандарт 5</param>
+        /// <param name="e">Стандарт 6</param>
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -112,6 +130,11 @@
             }
         }
 
+        /// <summary>
+        /// Метод Удаления по вторникам
+        /// </summary>
+        /// <param name="sender">хз 1</param>
+        /// <param name="e">хз 1</param>
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox2.Checked)
@@ -132,6 +155,11 @@
             }
         }
 
+        /// <summary>
+        /// Метод Удаления по средам
+        /// </summary>
+        /// <param name="sender">хз 1</param>
+        /// <param name="e">хз 1</param>
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox3.Checked)
@@ -152,6 +180,11 @@
             }
         }
 
+        /// <summary>
+        /// Метод Удаления по четвергам
+        /// </summary>
+        /// <param name="sender">хз 1</param>
+        /// <param name="e">хз 1</param>
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox4.Checked)
@@ -172,6 +205,11 @@
             }
         }
 
+        /// <summary>
+        /// Метод Удаления по пятницам
+        /// </summary>
+        /// <param name="sender">хз 1</param>
+        /// <param name="e">хз 1</param>
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox5.Checked)
@@ -197,19 +235,24 @@
             this.alg.Perestanovka(this);
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// О программе
+        /// </summary>
+        /// <param name="sender">Стандарт 2</param>
+        /// <param name="e">Стандарт 1</param>
+        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Бетка самой лучшей программы...");
         }
 
-        private void справкаToolStripMenuItem1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Метод справка
+        /// </summary>
+        /// <param name="sender">Стандарт 3</param>
+        /// <param name="e">Стандарт 4</param>
+        private void СправкаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Справка");
-        }
-
-        private void файлToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

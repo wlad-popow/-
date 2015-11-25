@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApplication1
+﻿////Основные алгоритмы
+namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;
@@ -7,19 +8,19 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Клас выполняющий алгоритм создания опримального расписания.
+    /// Класс, выполняющий алгоритм создания опримального расписания.
     /// </summary>
     class Algoritm
     {
         /// <summary>
-        /// Двумерный массив содержащий расписание загруженное из таблици формы.
+        /// Двумерный массив, содержащий расписание, загруженное из таблици формы.
         /// </summary>
         private List<List<string>> tablica = new List<List<string>>();
 
         /// <summary>
         /// Выполняет функцию проверки
         /// </summary>
-        /// <param name="s">Преподаватель</param>
+        /// <param name="s">Переменная преподавателя</param>
         /// <param name="ur">Номер урока</param>
         /// <returns>Если совпадает то 0 иначе 1</returns>
         private int Proverka(string s, int ur)
