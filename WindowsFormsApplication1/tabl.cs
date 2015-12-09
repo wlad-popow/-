@@ -1,11 +1,4 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="tabl.cs" company="UpturnedChair">
-//     Copyright (c) UpturnedChair. All rights reserved.
-// </copyright>
-// <author>wlad-popow</author>
-//-----------------------------------------------------------------------
-
-//// Работа с таблицей
+﻿//// Работа с таблицей
 namespace WindowsFormsApplication1
 {
     using System;

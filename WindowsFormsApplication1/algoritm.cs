@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
         /// <param name="f">Главная форма программы</param>
         public void Perestanovka(Form1 f)
         {
+            int ur;
             this.TablicaAdd(f);
             this.a = 0;
 
@@ -42,179 +43,26 @@ namespace WindowsFormsApplication1
 
             while (this.a <= 28)
             {
-                for (int fo = 0; fo < 3; fo++)
+                for (int i = 0; i < 11; i++)
                 {
-                    for (int fok = 0; fok < 7; fok++)
+                    ur = this.Poisk(i);
+                    if (ur != -1)
                     {
-                        this.AlgBeta();
-                        this.AlgBetaT();
-                        this.DopAlg();
+                        for (int j = this.a + 6; j > ur; j--)
+                        {
+                            if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
+                            {
+                                this.tablica[i][ur] = this.tablica[i][j];
+                                this.tablica[i][j] = string.Empty;
+                                break;
+                            }
+                        }
                     }
-                    this.AlgOkna();
                 }
+
                 this.a = this.a + 7;
+                this.Exp(f);
             }
-            this.Exp(f);
-        }
-
-        private void AlgBeta()
-        {
-            int ur;
-            for (int i = 0; i < 11; i++)
-            {
-                ur = this.Poisk(i, 0);
-                if (ur != -1)
-                {
-                    for (int j = this.a + 6; j > ur; j--)
-                    {
-                        if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
-                        {
-                            this.tablica[i][ur] = this.tablica[i][j];
-                            this.tablica[i][j] = string.Empty;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void AlgBetaT()
-        {
-            int ur;
-            for (int i = 0; i < 11; i++)
-            {
-                ur = this.Poisk(i, 0);
-                if (ur != -1)
-                {
-                    for (int j = this.a; j > ur; j++)
-                    {
-                        if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
-                        {
-                            this.tablica[i][ur] = this.tablica[i][j];
-                            this.tablica[i][j] = string.Empty;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void DopAlg()
-        {
-            int ur;
-            for (int i = 0; i < 11; i++)
-            {
-                ur = this.Poisk(i, 0);
-                if (ur != -1)
-                {
-                    for (int j = this.a; j < ur; j++)
-                    {
-                        if (this.tablica[i][j] != string.Empty)
-                        {
-                            ur = this.Poisk(i, j);
-                            if (ur != -1)
-                            {
-                                if (this.Proverka(this.tablica[i][j], ur) == 1)
-                                {
-                                    this.tablica[i][ur] = this.tablica[i][j];
-                                    this.tablica[i][j] = string.Empty;
-                                    this.AlgBeta();
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void AlgOkna()
-        {
-            int ur;
-            for (int i = 0; i < 11; i++)
-            {
-                for (int fok = 0; fok < 7; fok++)
-                {
-                    if (ProwerkaKlassa(i) < 0)
-                    {
-                        ur = this.Poisk(i, 0);
-                        if (ur != -1)
-                        {
-                            for (int j = this.a; j < 7; j++)
-                            {
-                                if (this.tablica[i][j] != string.Empty)
-                                {
-                                    ur = this.Poisk(i, j);
-                                    if (ur != -1)
-                                    {
-                                        if (this.Proverka(this.tablica[i][j], ur) == 1)
-                                        {
-                                            this.tablica[i][ur] = this.tablica[i][j];
-                                            this.tablica[i][j] = string.Empty;
-                                            break;
-                                        }
-                                        else
-                                        {
-                                            if (ur + 1 < 7)
-                                            {
-                                                ur = this.Poisk(i, ur + 1);
-                                            }
-                                            if (ur != -1)
-                                            {
-                                                if (this.Proverka(this.tablica[i][j], ur) == 1)
-                                                {
-                                                    this.tablica[i][ur] = this.tablica[i][j];
-                                                    this.tablica[i][j] = string.Empty;
-                                                    break;
-                                                }
-                                                else
-                                                {
-                                                    if (ur + 1 < 7)
-                                                    {
-                                                        ur = this.Poisk(i, ur + 1);
-                                                    }
-                                                    if (ur != -1)
-                                                    {
-                                                        if (this.Proverka(this.tablica[i][j], ur) == 1)
-                                                        {
-                                                            this.tablica[i][ur] = this.tablica[i][j];
-                                                            this.tablica[i][j] = string.Empty;
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private int ProwerkaKlassa(int klass)
-        {
-            int okno = 1;
-            for (int i = this.a; i < this.a + 7; i++)
-            {
-                if (this.tablica[klass][i].ToString() != string.Empty)
-                {
-                    if (i + 1 < this.a + 7 && this.tablica[klass][i + 1].ToString() == string.Empty)
-                    {
-                        okno--;
-                    }
-                }
-                else
-                {
-                    if (i + 1 < this.a + 7 && this.tablica[klass][i + 1].ToString() != string.Empty && okno == 0)
-                    {
-                        okno--;
-                    }
-                }
-            }
-            return okno;
         }
 
         /// <summary>
@@ -241,9 +89,9 @@ namespace WindowsFormsApplication1
         /// </summary>
         /// <param name="klass">Номер класса</param>
         /// <returns>Если есть сободный урок то номер урока i иначе -1</returns>
-        private int Poisk(int klass, int nomUr)
+        private int Poisk(int klass)
         {
-            for (int i = this.a + nomUr; i < this.a + 7; i++)
+            for (int i = this.a; i < this.a + 7; i++)
             {
                 if (this.tablica[klass][i].ToString() == string.Empty)
                 {
