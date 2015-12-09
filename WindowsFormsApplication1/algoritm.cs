@@ -29,7 +29,6 @@ namespace WindowsFormsApplication1
         /// <param name="f">Главная форма программы</param>
         public void Perestanovka(Form1 f)
         {
-            int ur;
             this.TablicaAdd(f);
             this.a = 0;
 
@@ -43,63 +42,85 @@ namespace WindowsFormsApplication1
 
             while (this.a <= 28)
             {
-                for (int i = 0; i < 11; i++)
+                for (int fok = 0; fok < 7; fok++)
                 {
-                    // алгоритм бета
-                    ur = this.Poisk(i,0);
-                    if (ur != -1)
+                    this.AlgBeta();
+                    this.AlgBetaT();
+                    this.DopAlg();
+                }
+                this.a = this.a + 7;
+            }
+            this.Exp(f);
+        }
+
+        private void AlgBeta()
+        {
+            int ur;
+            for (int i = 0; i < 11; i++)
+            {
+                ur = this.Poisk(i, 0);
+                if (ur != -1)
+                {
+                    for (int j = this.a + 6; j > ur; j--)
                     {
-                        for (int j = this.a + 6; j > ur; j--)
+                        if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
                         {
-                            if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
-                            {
-                                this.tablica[i][ur] = this.tablica[i][j];
-                                this.tablica[i][j] = string.Empty;
-                                break;
-                            }
+                            this.tablica[i][ur] = this.tablica[i][j];
+                            this.tablica[i][j] = string.Empty;
+                            break;
                         }
                     }
+                }
+            }
+        }
 
-                    // алгоритм бета Т
-                    ur = this.Poisk(i,0);
-                    if (ur != -1)
+        private void AlgBetaT()
+        {
+            int ur;
+            for (int i = 0; i < 11; i++)
+            {
+                ur = this.Poisk(i, 0);
+                if (ur != -1)
+                {
+                    for (int j = this.a; j > ur; j++)
                     {
-                        for (int j = this.a ; j > ur; j++)
+                        if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
                         {
-                            if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
-                            {
-                                this.tablica[i][ur] = this.tablica[i][j];
-                                this.tablica[i][j] = string.Empty;
-                                break;
-                            }
+                            this.tablica[i][ur] = this.tablica[i][j];
+                            this.tablica[i][j] = string.Empty;
+                            break;
                         }
                     }
+                }
+            }
+        }
 
-                    //Доп. алгоритм
-                    ur = this.Poisk(i,0);
-                    if (ur != -1)
+        private void DopAlg()
+        {
+            int ur;
+            for (int i = 0; i < 11; i++)
+            {
+                ur = this.Poisk(i, 0);
+                if (ur != -1)
+                {
+                    for (int j = this.a; j < ur; j++)
                     {
-                        for (int j = this.a; j < ur; j++)
+                        if (this.tablica[i][j] != string.Empty)
                         {
-                            if (this.tablica[i][j] != string.Empty)
+                            ur = this.Poisk(i, j);
+                            if (ur != -1)
                             {
-                                ur = this.Poisk(i,j);
-                                if (ur != -1)
+                                if (this.Proverka(this.tablica[i][j], ur) == 1)
                                 {
-                                    if (this.Proverka(this.tablica[i][j], ur) == 1)
-                                    {
-                                        this.tablica[i][ur] = this.tablica[i][j];
-                                        this.tablica[i][j] = string.Empty;
-                                        break;
-                                    }
+                                    this.tablica[i][ur] = this.tablica[i][j];
+                                    this.tablica[i][j] = string.Empty;
+                                    this.AlgBeta();
+                                    break;
                                 }
                             }
                         }
                     }
                 }
-
-                this.a = this.a + 7;
-                this.Exp(f);
             }
         }
 
