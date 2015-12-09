@@ -299,11 +299,7 @@ namespace WindowsFormsApplication1
                 { 
                     workSheet.Cells[i,j]=Tabl.Rows[i].Cells[j].Value;
                 }
-            var sfd = new SaveFileDialog();
-            sfd.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-            }
+            workSheet.SaveAs("MyFile.xls");
             excelApp.Visible = true;
             excelApp.Quit();
         }
