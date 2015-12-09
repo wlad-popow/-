@@ -267,7 +267,8 @@ namespace WindowsFormsApplication1
         /// <param name="e">Стандарт 1</param>
         private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Бетка самой лучшей программы...");
+            Form3 secondForm = new Form3();
+            secondForm.ShowDialog();
         }
 
         /// <summary>
