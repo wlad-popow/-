@@ -15,6 +15,12 @@ namespace WindowsFormsApplication1
         public Form3()
         {
             InitializeComponent();
+            this.textBox1.Text = "Версия 1.0" + Environment.NewLine + "Авторы: UpturnedChair" + Environment.NewLine + "All rights ignored";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
