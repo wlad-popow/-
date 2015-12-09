@@ -45,7 +45,8 @@ namespace WindowsFormsApplication1
             {
                 for (int i = 0; i < 11; i++)
                 {
-                    ur = this.Poisk(i);
+                    // алгоритм бета
+                    ur = this.Poisk(i,0);
                     if (ur != -1)
                     {
                         for (int j = this.a + 6; j > ur; j--)
@@ -55,6 +56,43 @@ namespace WindowsFormsApplication1
                                 this.tablica[i][ur] = this.tablica[i][j];
                                 this.tablica[i][j] = string.Empty;
                                 break;
+                            }
+                        }
+                    }
+
+                    // алгоритм бета Т
+                    ur = this.Poisk(i,0);
+                    if (ur != -1)
+                    {
+                        for (int j = this.a ; j > ur; j++)
+                        {
+                            if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
+                            {
+                                this.tablica[i][ur] = this.tablica[i][j];
+                                this.tablica[i][j] = string.Empty;
+                                break;
+                            }
+                        }
+                    }
+
+                    //Доп. алгоритм
+                    ur = this.Poisk(i,0);
+                    if (ur != -1)
+                    {
+                        for (int j = this.a; j < ur; j++)
+                        {
+                            if (this.tablica[i][j] != string.Empty)
+                            {
+                                ur = this.Poisk(i,j);
+                                if (ur != -1)
+                                {
+                                    if (this.Proverka(this.tablica[i][j], ur) == 1)
+                                    {
+                                        this.tablica[i][ur] = this.tablica[i][j];
+                                        this.tablica[i][j] = string.Empty;
+                                        break;
+                                    }
+                                }
                             }
                         }
                     }
@@ -89,9 +127,9 @@ namespace WindowsFormsApplication1
         /// </summary>
         /// <param name="klass">Номер класса</param>
         /// <returns>Если есть сободный урок то номер урока i иначе -1</returns>
-        private int Poisk(int klass)
+        private int Poisk(int klass, int nomUr)
         {
-            for (int i = this.a; i < this.a + 7; i++)
+            for (int i = this.a + nomUr; i < this.a + 7; i++)
             {
                 if (this.tablica[klass][i].ToString() == string.Empty)
                 {
