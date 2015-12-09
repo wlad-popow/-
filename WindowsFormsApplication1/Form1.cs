@@ -277,7 +277,13 @@ namespace WindowsFormsApplication1
         /// <param name="e">Стандарт 4</param>
         private void СправкаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Справка");
+            Form2 secondForm = new Form2();
+            secondForm.ShowDialog();
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

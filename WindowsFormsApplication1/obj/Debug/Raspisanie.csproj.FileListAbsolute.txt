@@ -52,3 +52,4 @@ C:\Users\Zorik\Desktop\ras1\Raspisanie\WindowsFormsApplication1\obj\Debug\Window
 C:\Users\Zorik\Desktop\ras1\Raspisanie\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
 C:\Users\Zorik\Desktop\ras1\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\Zorik\Desktop\ras1\Raspisanie\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Zorik\Desktop\ras1\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
