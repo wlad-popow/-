@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
     using System.Threading.Tasks;
     using System.Windows.Forms;
     using Microsoft.Office.Interop.Excel;
+    using Excel = Microsoft.Office.Interop.Excel;
 
     /// <summary>
     /// Класс формы программы.
@@ -267,7 +268,8 @@ namespace WindowsFormsApplication1
         /// <param name="e">Стандарт 1</param>
         private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Бетка самой лучшей программы...");
+            Form3 secondForm = new Form3();
+            secondForm.ShowDialog();
         }
 
         /// <summary>
@@ -277,7 +279,29 @@ namespace WindowsFormsApplication1
         /// <param name="e">Стандарт 4</param>
         private void СправкаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Справка");
+            Form2 secondForm = new Form2();
+            secondForm.ShowDialog();
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Excel.Application excelApp = new Excel.Application();
+            excelApp.Visible = false;
+            excelApp.Workbooks.Open(string.Format(@"{0}\Price.xlsx", Environment.CurrentDirectory));
+            Excel.Worksheet workSheet = excelApp.ActiveSheet;
+            for(int i=0;i<36;i++)
+                for (int j = 0; j < 13; j++)
+                { 
+                    workSheet.Cells[i,j]=Tabl.Rows[i].Cells[j].Value;
+                }
+            workSheet.SaveAs("MyFile.xls");
+            excelApp.Visible = true;
+            excelApp.Quit();
         }
     }
 }
