@@ -298,14 +298,16 @@ namespace WindowsFormsApplication1
                 excelApp.Visible = false;
                 excelApp.Workbooks.Add(Type.Missing);
                 Excel.Worksheet workSheet = excelApp.ActiveSheet;
-                for (int i = 0; i < 36; i++)
-                    for (int j = 0; j < 13; j++)
+                for (int i = 1; i < 36; i++)
+                    for (int j = 1; j < 13; j++)
                     {
                         workSheet.Cells[i, j] = Tabl.Rows[i].Cells[j].Value;
                     }
                 string fileName = saveFileDialog1.FileName;
+                workSheet.SaveAs(fileName);
                  excelApp.Visible = true;
                  excelApp.Quit();
+                 GC.Collect();
             
             }
          
