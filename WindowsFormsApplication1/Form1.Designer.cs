@@ -77,7 +77,7 @@
             this.Redaktor.Name = "Redaktor";
             this.Redaktor.Size = new System.Drawing.Size(254, 23);
             this.Redaktor.TabIndex = 3;
-            this.Redaktor.Text = "Редактировать";
+            this.Redaktor.Text = "Перестроить расписание";
             this.Redaktor.UseVisualStyleBackColor = true;
             this.Redaktor.Click += new System.EventHandler(this.Redaktor_Click);
             // 
