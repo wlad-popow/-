@@ -53,6 +53,7 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -301,5 +302,6 @@
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

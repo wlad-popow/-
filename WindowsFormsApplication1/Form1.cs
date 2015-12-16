@@ -290,18 +290,27 @@ namespace WindowsFormsApplication1
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Excel.Application excelApp = new Excel.Application();
-            excelApp.Visible = false;
-            excelApp.Workbooks.Open(string.Format(@"{0}\Price.xlsx", Environment.CurrentDirectory));
-            Excel.Worksheet workSheet = excelApp.ActiveSheet;
-            for(int i=0;i<36;i++)
-                for (int j = 0; j < 13; j++)
-                { 
-                    workSheet.Cells[i,j]=Tabl.Rows[i].Cells[j].Value;
-                }
-            workSheet.SaveAs("MyFile.xls");
-            excelApp.Visible = true;
-            excelApp.Quit();
+            saveFileDialog1.InitialDirectory = "C:\tmp";
+            saveFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Excel.Application excelApp = new Excel.Application();
+                excelApp.Visible = false;
+                excelApp.Workbooks.Add(Type.Missing);
+                Excel.Worksheet workSheet = excelApp.ActiveSheet;
+                for (int i = 0; i < 36; i++)
+                    for (int j = 0; j < 13; j++)
+                    {
+                        workSheet.Cells[i, j] = Tabl.Rows[i].Cells[j].Value;
+                    }
+                string fileName = saveFileDialog1.FileName;
+                 excelApp.Visible = true;
+                 excelApp.Quit();
+            
+            }
+         
+
+
         }
     }
 }
