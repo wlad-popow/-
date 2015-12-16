@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
     /// </summary>
     public partial class Form1 : Form
     {
+        int m;
         /// <summary>
         ///  Переменные используются при удалении по дням недели
         /// </summary>
@@ -53,7 +54,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
 
             Tabl.ColumnCount = 13;
-            Tabl.RowCount = 35;
+            Tabl.RowCount = 36;
         }
 
         /// <summary>
@@ -94,8 +95,10 @@ namespace WindowsFormsApplication1
         /// <param name="e">хз 996</param>
         private void ОткрытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            m = 1;
             this.input.Inp(this);
         }
+
 
         /// <summary>
         /// Метод открытия 2
@@ -145,7 +148,10 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        Tabl[i, j].Value = this.input.tab[j][i];
+                        if (m == 1)
+                            Tabl[i, j].Value = this.input.tab[j][i];
+                        else
+                            return;
                     }
                 }
             }
@@ -170,7 +176,10 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 8; j < 15; j++)
                     {
-                        Tabl[i, j].Value = this.input.tab[j][i];
+                        if (m == 1)
+                            Tabl[i, j].Value = this.input.tab[j][i];
+                        else
+                            return;
                     }
                 }
             }
@@ -195,7 +204,10 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 15; j < 22; j++)
                     {
-                        Tabl[i, j].Value = this.input.tab[j][i];
+                        if (m == 1)
+                            Tabl[i, j].Value = this.input.tab[j][i];
+                        else
+                            return;
                     }
                 }
             }
@@ -220,7 +232,10 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 22; j < 29; j++)
                     {
-                        Tabl[i, j].Value = this.input.tab[j][i];
+                        if (m == 1)
+                            Tabl[i, j].Value = this.input.tab[j][i];
+                        else
+                            return;
                     }
                 }
             }
@@ -245,7 +260,10 @@ namespace WindowsFormsApplication1
                 {
                     for (int j = 29; j < 36; j++)
                     {
-                        Tabl[i, j].Value = this.input.tab[j][i];
+                        if (m == 1)
+                            Tabl[i, j].Value = this.input.tab[j][i];
+                        else
+                            return;
                     }
                 }
             }

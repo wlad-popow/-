@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
         /// <param name="f">Главная форма программы</param>
         public void Inp(Form1 f)
         {
+            
             string str, filename = string.Empty;
             int rowCount;
             int collumnCount;
