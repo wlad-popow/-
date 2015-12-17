@@ -4,6 +4,7 @@ namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -50,76 +51,97 @@ namespace WindowsFormsApplication1
                         this.AlgBetaT();
                         this.DopAlg();
                     }
+
                     this.AlgOkna();
                 }
+
                 this.a = this.a + 7;
             }
+
             this.Exp(f);
         }
 
+        /// <summary>
+        /// Алгоритм перестановки уроков бета версии.
+        /// </summary>
         private void AlgBeta()
         {
             int ur;
             for (int i = 0; i < 11; i++)
             {
-                ur = this.Poisk(i, 0);
-                if (ur != -1)
+                if (this.ProwerkaKlassa(i) < 0)
                 {
-                    for (int j = this.a + 6; j > ur; j--)
+                    ur = this.Poisk(i, 0);
+                    if (ur != -1)
                     {
-                        if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
+                        for (int j = this.a + 6; j > ur; j--)
                         {
-                            this.tablica[i][ur] = this.tablica[i][j];
-                            this.tablica[i][j] = string.Empty;
-                            break;
+                            if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
+                            {
+                                this.tablica[i][ur] = this.tablica[i][j];
+                                this.tablica[i][j] = string.Empty;
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Перевернутый алгоритм перестановки уроков бета версии.
+        /// </summary>
         private void AlgBetaT()
         {
             int ur;
             for (int i = 0; i < 11; i++)
             {
-                ur = this.Poisk(i, 0);
-                if (ur != -1)
+                if (this.ProwerkaKlassa(i) < 0)
                 {
-                    for (int j = this.a; j > ur; j++)
+                    ur = this.Poisk(i, 0);
+                    if (ur != -1)
                     {
-                        if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
+                        for (int j = this.a; j > ur; j++)
                         {
-                            this.tablica[i][ur] = this.tablica[i][j];
-                            this.tablica[i][j] = string.Empty;
-                            break;
+                            if (this.tablica[i][j] != string.Empty && this.Proverka(this.tablica[i][j], ur) == 1)
+                            {
+                                this.tablica[i][ur] = this.tablica[i][j];
+                                this.tablica[i][j] = string.Empty;
+                                break;
+                            }
                         }
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Дополнительный алгоритм перестановки уроков.
+        /// </summary>
         private void DopAlg()
         {
             int ur;
             for (int i = 0; i < 11; i++)
             {
-                ur = this.Poisk(i, 0);
-                if (ur != -1)
+                if (this.ProwerkaKlassa(i) < 0)
                 {
-                    for (int j = this.a; j < ur; j++)
+                    ur = this.Poisk(i, 0);
+                    if (ur != -1)
                     {
-                        if (this.tablica[i][j] != string.Empty)
+                        for (int j = this.a; j < ur; j++)
                         {
-                            ur = this.Poisk(i, j);
-                            if (ur != -1)
+                            if (this.tablica[i][j] != string.Empty)
                             {
-                                if (this.Proverka(this.tablica[i][j], ur) == 1)
+                                ur = this.Poisk(i, j);
+                                if (ur != -1)
                                 {
-                                    this.tablica[i][ur] = this.tablica[i][j];
-                                    this.tablica[i][j] = string.Empty;
-                                    this.AlgBeta();
-                                    break;
+                                    if (this.Proverka(this.tablica[i][j], ur) == 1)
+                                    {
+                                        this.tablica[i][ur] = this.tablica[i][j];
+                                        this.tablica[i][j] = string.Empty;
+                                        this.AlgBeta();
+                                        break;
+                                    }
                                 }
                             }
                         }
@@ -128,6 +150,9 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /// <summary>
+        /// Алгоритм перестановки уроков создающий свободные уроки.
+        /// </summary>
         private void AlgOkna()
         {
             int ur;
@@ -135,16 +160,16 @@ namespace WindowsFormsApplication1
             {
                 for (int fok = 0; fok < 7; fok++)
                 {
-                    if (ProwerkaKlassa(i) < 0)
+                    if (this.ProwerkaKlassa(i) < 0)
                     {
                         ur = this.Poisk(i, 0);
                         if (ur != -1)
                         {
-                            for (int j = this.a; j < 7; j++)
+                            for (int j = this.a; j < this.a + 7; j++)
                             {
                                 if (this.tablica[i][j] != string.Empty)
                                 {
-                                    ur = this.Poisk(i, j);
+                                    ur = this.Poisk(i, j - this.a);
                                     if (ur != -1)
                                     {
                                         if (this.Proverka(this.tablica[i][j], ur) == 1)
@@ -155,10 +180,11 @@ namespace WindowsFormsApplication1
                                         }
                                         else
                                         {
-                                            if (ur + 1 < 7)
+                                            if (ur + 1 < this.a + 7)
                                             {
                                                 ur = this.Poisk(i, ur + 1);
                                             }
+
                                             if (ur != -1)
                                             {
                                                 if (this.Proverka(this.tablica[i][j], ur) == 1)
@@ -169,10 +195,11 @@ namespace WindowsFormsApplication1
                                                 }
                                                 else
                                                 {
-                                                    if (ur + 1 < 7)
+                                                    if (ur + 1 < this.a + 7)
                                                     {
                                                         ur = this.Poisk(i, ur + 1);
                                                     }
+
                                                     if (ur != -1)
                                                     {
                                                         if (this.Proverka(this.tablica[i][j], ur) == 1)
@@ -194,6 +221,12 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /// <summary>
+        /// Проверка класса на наличие окна.
+        /// </summary>
+        /// <param name="klass">Номер класса</param>
+        /// <returns>Возвращает меньше нуля если есть окно, иначе возвращает 1,
+        /// либо 0 в тех случаях если первые уроки свободны или последних уроков нет</returns>
         private int ProwerkaKlassa(int klass)
         {
             int okno = 1;
@@ -214,6 +247,7 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+
             return okno;
         }
 
@@ -240,6 +274,7 @@ namespace WindowsFormsApplication1
         /// Метод поиска свободного урока в классе.
         /// </summary>
         /// <param name="klass">Номер класса</param>
+        /// <param name="nomUr">Номер урока</param>
         /// <returns>Если есть сободный урок то номер урока i иначе -1</returns>
         private int Poisk(int klass, int nomUr)
         {

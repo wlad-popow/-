@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
             s = string.Empty;
             this.allLessons.Remove(f.TablZnach.SelectedItem.ToString());
             f.missing_teachers.Text += f.TablZnach.SelectedItem.ToString() + "\r\n";
-            f.TablZnach.SelectedItem = string.Empty;
+            f.TablZnach.Items.Clear();
         }
     }
 }
