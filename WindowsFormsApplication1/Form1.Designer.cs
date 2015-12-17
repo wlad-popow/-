@@ -54,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,7 @@
             // Redaktor
             // 
             this.Redaktor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Redaktor.Location = new System.Drawing.Point(865, 255);
+            this.Redaktor.Location = new System.Drawing.Point(865, 267);
             this.Redaktor.Name = "Redaktor";
             this.Redaktor.Size = new System.Drawing.Size(254, 23);
             this.Redaktor.TabIndex = 3;
@@ -95,7 +96,7 @@
             this.TablZnach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TablZnach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TablZnach.FormattingEnabled = true;
-            this.TablZnach.Location = new System.Drawing.Point(865, 195);
+            this.TablZnach.Location = new System.Drawing.Point(865, 207);
             this.TablZnach.Name = "TablZnach";
             this.TablZnach.Size = new System.Drawing.Size(121, 21);
             this.TablZnach.TabIndex = 7;
@@ -104,7 +105,7 @@
             // del
             // 
             this.del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.del.Location = new System.Drawing.Point(865, 222);
+            this.del.Location = new System.Drawing.Point(865, 234);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(121, 27);
             this.del.TabIndex = 8;
@@ -167,14 +168,14 @@
             // справкаToolStripMenuItem1
             // 
             this.справкаToolStripMenuItem1.Name = "справкаToolStripMenuItem1";
-            this.справкаToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
+            this.справкаToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.справкаToolStripMenuItem1.Text = "Справка";
             this.справкаToolStripMenuItem1.Click += new System.EventHandler(this.СправкаToolStripMenuItem1_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.ОПрограммеToolStripMenuItem_Click);
             // 
@@ -248,11 +249,21 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Выбери день недели для удаления";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(865, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Список предметов к удалению:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1163, 464);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
@@ -303,5 +314,6 @@
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label label1;
     }
 }
