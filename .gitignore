@@ -21,6 +21,8 @@ bld/
 
 # Roslyn cache directories
 *.ide/
+.bin
+.obj
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

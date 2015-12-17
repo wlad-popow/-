@@ -16,3 +16,5 @@ C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\Ragnareg\Desktop\Ras\UnitTest\obj\Debug\UnitTest.pdb
 C:\Users\Ragnareg\Desktop\Новая папка (2)\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Ragnareg\Desktop\Новая папка (2)\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\Zorik\Desktop\ras1\Raspisanie\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Zorik\Desktop\ras1\Raspisanie\UnitTest\obj\Debug\UnitTest.dll

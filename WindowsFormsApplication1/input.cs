@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApplication1
+﻿//// Докуммент ввод
+namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;
@@ -10,12 +11,12 @@
     /// <summary>
     /// Класс считывания файла Excel.
     /// </summary>
-    class Input
+    public class Input
     {
         /// <summary>
         /// Считанное расписание из Excel.
         /// </summary>
-        public List<List<string>> Tab = new List<List<string>>();
+        public List<List<string>> tab = new List<List<string>>();
 
         /// <summary>
         /// Метод считывания файла Excel в tab.
@@ -23,11 +24,12 @@
         /// <param name="f">Главная форма программы</param>
         public void Inp(Form1 f)
         {
+            
             string str, filename = string.Empty;
             int rowCount;
             int collumnCount;
 
-            this.Tab.Clear();
+            this.tab.Clear();
 
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
@@ -55,11 +57,11 @@
 
             for (rowCount = 1; rowCount <= range.Rows.Count; rowCount++)
             {
-                this.Tab.Add(new List<string>());
+                this.tab.Add(new List<string>());
                 for (collumnCount = 1; collumnCount <= range.Columns.Count; collumnCount++)
                 {
                     str = (string)(range.Cells[rowCount, collumnCount] as Microsoft.Office.Interop.Excel.Range).Text;
-                    this.Tab[rowCount - 1].Add(str.Trim());
+                    this.tab[rowCount - 1].Add(str.Trim());
                 }
             }
 
@@ -71,8 +73,8 @@
             this.ReleaseObject(excelApp);
 
             int x = 0, y = 0;
-            f.Tabl.RowCount = this.Tab.Count;
-            foreach (List<string> i in this.Tab)
+            f.Tabl.RowCount = this.tab.Count;
+            foreach (List<string> i in this.tab)
             {
                 f.Tabl.ColumnCount = i.Count;
                 foreach (string u in i)

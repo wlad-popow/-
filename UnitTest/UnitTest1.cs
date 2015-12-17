@@ -1,18 +1,25 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WindowsFormsApplication1;
-using System.Windows.Forms;
-using System.Collections.Generic;
-
+﻿////Юнит тесты
 namespace UnitTest
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using WindowsFormsApplication1;
+
+    /// <summary>
+    /// Юнит тесты
+    /// </summary>
     [TestClass]
     public class UnitTest1
     {
+        /// <summary>
+        /// Метод открытия урока
+        /// </summary>
         [TestMethod]
         public void Open()
         {
-            input inp = new input();
+            Input inp = new Input();
             
             //получить день недели
             foreach (List<string> i in inp.tab)
@@ -23,37 +30,18 @@ namespace UnitTest
                 }
             }          
         }
-
+        
+        /// <summary>
+        /// Проверка на совпадение уроков
+        /// </summary>
         [TestMethod]
-        public void delete()
+        public void Proverka()
         {
-            Form1 f = new Form1();
-            //получить удаляемый урок
-            Tabl t = new Tabl();
-            //проверить удален ли урок
-            Assert.AreEqual("",f.Tabl[5,1]);                    
-        }
-
-        [TestMethod]
-        public void klass()
-        {
-            //получить номер классов в котором удаляется урок
-            //Assert.AreEqual("7", urok.nom);                     
-        }
-
-        [TestMethod]
-        public void proverka()
-        {
-            Form1 f = new Form1();
-            //проверить не совпадают ли уроки у разных классов в строке
-            for (int i = 3; i < 11; i++ )
+            Algoritm alg = new Algoritm();
+            ////проверить не совпадают ли уроки у разных классов в строке
+            for (int i = 3; i < 11; i++)
             {
-                Assert.AreEqual(f.Tabl[2, 1], f.Tabl[i, 1]);
             }                      
         }
     }
 }
-
-            
-           
-            

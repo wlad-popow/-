@@ -1,4 +1,12 @@
-﻿namespace WindowsFormsApplication1
+﻿//-----------------------------------------------------------------------
+// <copyright file="tabl.cs" company="UpturnedChair">
+//     Copyright (c) UpturnedChair. All rights reserved.
+// </copyright>
+// <author>wlad-popow</author>
+//-----------------------------------------------------------------------
+
+//// Работа с таблицей
+namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;
@@ -81,7 +89,7 @@
             s = string.Empty;
             this.allLessons.Remove(f.TablZnach.SelectedItem.ToString());
             f.missing_teachers.Text += f.TablZnach.SelectedItem.ToString() + "\r\n";
-            f.TablZnach.SelectedItem = string.Empty;
+            f.TablZnach.Items.Clear();
         }
     }
 }

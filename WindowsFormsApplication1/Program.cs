@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApplication1
+﻿//// Сборщик программы
+namespace WindowsFormsApplication1
 {
     using System;
     using System.Collections.Generic;
@@ -9,13 +10,13 @@
     /// <summary>
     /// Главная точка входа для приложения.
     /// </summary>
-    static class Program
+    public static class Program
     {
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
