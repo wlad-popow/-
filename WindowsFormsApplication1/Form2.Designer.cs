@@ -39,14 +39,14 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(394, 620);
+            this.textBox1.Size = new System.Drawing.Size(394, 280);
             this.textBox1.TabIndex = 0;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 645);
+            this.ClientSize = new System.Drawing.Size(418, 300);
             this.Controls.Add(this.textBox1);
             this.Name = "Form2";
             this.Text = "Справка";
