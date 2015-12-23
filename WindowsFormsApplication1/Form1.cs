@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
         /// <summary>
         ///  Переменные используются при удалении по дням недели
         /// </summary>
-        private int b, a, c = 0;
+        private int b, a;
 
         /// <summary>
         /// Метод удаления
@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
         {
             for (; this.a < this.b; this.a++)
             {
-                for (int j = 0; j < 13; j++)
+                for (int j = 2; j < 13; j++)
                 {
                     Tabl[j, this.a].Value = null;
                 }
@@ -112,20 +112,6 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// Метод восстановления по дням недели
-        /// </summary>
-        private void Vos()
-        {
-            for (int i = 0; i < 13; i++)
-            {
-                for (int j = this.c; j < this.b; j++)
-                {
-                    Tabl[i, j].Value = this.input.tab[j][i];
-                }
-            }
-        }
-
-        /// <summary>
         /// Объект класса Algoritm.
         /// </summary>
         private Algoritm alg = new Algoritm();
@@ -145,7 +131,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                for (int i = 0; i < 13; i++)
+                for (int i = 2; i < 13; i++)
                 {
                     for (int j = 0; j < 8; j++)
                     {
@@ -173,7 +159,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                for (int i = 0; i < 13; i++)
+                for (int i = 2; i < 13; i++)
                 {
                     for (int j = 8; j < 15; j++)
                     {
@@ -201,7 +187,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                for (int i = 0; i < 13; i++)
+                for (int i = 2; i < 13; i++)
                 {
                     for (int j = 15; j < 22; j++)
                     {
@@ -229,7 +215,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                for (int i = 0; i < 13; i++)
+                for (int i = 2; i < 13; i++)
                 {
                     for (int j = 22; j < 29; j++)
                     {
@@ -257,7 +243,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                for (int i = 0; i < 13; i++)
+                for (int i = 2; i < 13; i++)
                 {
                     for (int j = 29; j < 36; j++)
                     {
@@ -302,7 +288,6 @@ namespace WindowsFormsApplication1
             secondForm.ShowDialog();
         }
 
-        private Excel.Range excelcells;
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.InitialDirectory = "C:\tmp";
