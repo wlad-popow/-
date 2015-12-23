@@ -13,7 +13,6 @@ namespace WindowsFormsApplication1
     using Microsoft.Office.Interop.Excel;
     using Excel = Microsoft.Office.Interop.Excel;
 
-
     /// <summary>
     /// Класс формы программы.
     /// </summary>
@@ -24,7 +23,6 @@ namespace WindowsFormsApplication1
         ///  Переменные используются при удалении по дням недели
         /// </summary>
         private int b, a;
-
         /// <summary>
         /// Метод удаления
         /// </summary>
@@ -53,7 +51,6 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 36;
         }
@@ -287,16 +284,20 @@ namespace WindowsFormsApplication1
             Form2 secondForm = new Form2();
             secondForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Метод сохранения расписания
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.InitialDirectory = "C:\tmp";
+            saveFileDialog1.InitialDirectory = "C:\tmp";                        //Открытия диалога для сохранения
             saveFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Excel.Application excelApp = new Excel.Application();
+                Excel.Application excelApp = new Excel.Application();           //Открытие экселя
                 excelApp.Visible = false;
-                excelApp.Workbooks.Open(@"C:\R.xlsx");
+                excelApp.Workbooks.Open(@"C:\R.xlsx");                          // Путь к файлу шаблона
                 Excel.Worksheet workSheet = excelApp.ActiveSheet;
                 for (int i = 1; i < 36; i++)
                     for (int j = 2; j < 13; j++)
