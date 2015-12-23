@@ -319,7 +319,7 @@ namespace WindowsFormsApplication1
                 for (int i = 1; i < 36; i++)
                     for (int j = 1; j < 13; j++)
                     {
-                        workSheet.Cells[i, j] = Tabl.Rows[i].Cells[j].Value;
+                        workSheet.Cells[i+1, j+1] = Tabl.Rows[i].Cells[j].Value;
                     }
                 string fileName = saveFileDialog1.FileName;
                 workSheet.SaveAs(fileName);
