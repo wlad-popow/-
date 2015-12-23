@@ -13,6 +13,7 @@ namespace WindowsFormsApplication1
     using Microsoft.Office.Interop.Excel;
     using Excel = Microsoft.Office.Interop.Excel;
 
+
     /// <summary>
     /// Класс формы программы.
     /// </summary>
@@ -301,11 +302,7 @@ namespace WindowsFormsApplication1
             secondForm.ShowDialog();
         }
 
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        private Excel.Range excelcells;
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.InitialDirectory = "C:\tmp";
@@ -314,10 +311,10 @@ namespace WindowsFormsApplication1
             {
                 Excel.Application excelApp = new Excel.Application();
                 excelApp.Visible = false;
-                excelApp.Workbooks.Add(Type.Missing);
+                excelApp.Workbooks.Open(@"C:\R.xlsx");
                 Excel.Worksheet workSheet = excelApp.ActiveSheet;
                 for (int i = 1; i < 36; i++)
-                    for (int j = 1; j < 13; j++)
+                    for (int j = 2; j < 13; j++)
                     {
                         workSheet.Cells[i+1, j+1] = Tabl.Rows[i].Cells[j].Value;
                     }
@@ -325,12 +322,8 @@ namespace WindowsFormsApplication1
                 workSheet.SaveAs(fileName);
                  excelApp.Visible = true;
                  excelApp.Quit();
-                 GC.Collect();
-            
+                 GC.Collect();  
             }
-         
-
-
         }
     }
 }
