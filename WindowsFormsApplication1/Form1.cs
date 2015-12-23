@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         int m;
+        //int[,] pon = new int[7, 11];
         /// <summary>
         ///  Переменные используются при удалении по дням недели
         /// </summary>
@@ -32,7 +33,7 @@ namespace WindowsFormsApplication1
             {
                 for (int j = 2; j < 13; j++)
                 {
-                    Tabl[j, this.a].Value = null;
+                    Tabl[j, this.a].Value = "";
                 }
             }
         }
@@ -113,6 +114,11 @@ namespace WindowsFormsApplication1
         /// </summary>
         private Algoritm alg = new Algoritm();
 
+        string[,] poned = new string[50, 50];
+        string[,] vtor = new string[50, 50];
+        string[,] sreda = new string[50, 50];
+        string[,] chetv = new string[50, 50];
+        string[,] pyat = new string[50, 50];
         /// <summary>
         /// Метод удаления по понедельникам
         /// </summary>
@@ -124,6 +130,13 @@ namespace WindowsFormsApplication1
             {
                 this.a = 1;
                 this.b = 8;
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        poned[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
                 this.Ud();
             }
             else
@@ -133,7 +146,7 @@ namespace WindowsFormsApplication1
                     for (int j = 0; j < 8; j++)
                     {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = poned[i, j];
                         else
                             return;
                     }
@@ -152,6 +165,13 @@ namespace WindowsFormsApplication1
             {
                 this.a = 8;
                 this.b = 15;
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 8; j < 15; j++)
+                    {
+                        vtor[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
                 this.Ud();
             }
             else
@@ -161,7 +181,7 @@ namespace WindowsFormsApplication1
                     for (int j = 8; j < 15; j++)
                     {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = vtor[i,j];
                         else
                             return;
                     }
@@ -180,6 +200,13 @@ namespace WindowsFormsApplication1
             {
                 this.a = 15;
                 this.b = 22;
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 15; j < 22; j++)
+                    {
+                        sreda[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
                 this.Ud();
             }
             else
@@ -189,7 +216,7 @@ namespace WindowsFormsApplication1
                     for (int j = 15; j < 22; j++)
                     {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value =sreda[i,j];
                         else
                             return;
                     }
@@ -208,6 +235,13 @@ namespace WindowsFormsApplication1
             {
                 this.a = 22;
                 this.b = 29;
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 22; j < 29; j++)
+                    {
+                        chetv[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
                 this.Ud();
             }
             else
@@ -217,7 +251,7 @@ namespace WindowsFormsApplication1
                     for (int j = 22; j < 29; j++)
                     {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = chetv[i, j];
                         else
                             return;
                     }
@@ -236,6 +270,13 @@ namespace WindowsFormsApplication1
             {
                 this.a = 29;
                 this.b = 36;
+                for (int i = 0; i < 13; i++)
+                {
+                    for (int j = 29; j < 36; j++)
+                    {
+                        pyat[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
                 this.Ud();
             }
             else
@@ -245,7 +286,7 @@ namespace WindowsFormsApplication1
                     for (int j = 29; j < 36; j++)
                     {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = pyat[i, j];
                         else
                             return;
                     }
