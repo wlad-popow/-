@@ -95,6 +95,7 @@ namespace WindowsFormsApplication1
         private void ОткрытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             m = 1;
+            missing_teachers.Text = null;
             this.input.Inp(this);
         }
 

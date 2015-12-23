@@ -87,7 +87,7 @@
             // 
             this.missing_teachers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.missing_teachers.AutoSize = true;
-            this.missing_teachers.Location = new System.Drawing.Point(862, 367);
+            this.missing_teachers.Location = new System.Drawing.Point(865, 366);
             this.missing_teachers.Name = "missing_teachers";
             this.missing_teachers.Size = new System.Drawing.Size(0, 13);
             this.missing_teachers.TabIndex = 6;
@@ -138,21 +138,21 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem.Text = "Создать...";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem1
             // 
             this.открытьToolStripMenuItem1.Name = "открытьToolStripMenuItem1";
-            this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem1.Text = "Открыть...";
             this.открытьToolStripMenuItem1.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem1_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить...";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -263,7 +263,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(862, 354);
+            this.label3.Location = new System.Drawing.Point(862, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(240, 13);
             this.label3.TabIndex = 18;
