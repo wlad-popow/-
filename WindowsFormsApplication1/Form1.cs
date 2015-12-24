@@ -19,11 +19,11 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         int m;
+        //int[,] pon = new int[7, 11];
         /// <summary>
         ///  Переменные используются при удалении по дням недели
         /// </summary>
-        private int b, a, c = 0;
-
+        private int b, a;
         /// <summary>
         /// Метод удаления
         /// </summary>
@@ -31,9 +31,9 @@ namespace WindowsFormsApplication1
         {
             for (; this.a < this.b; this.a++)
             {
-                for (int j = 0; j < 13; j++)
+                for (int j = 2; j < 13; j++)
                 {
-                    Tabl[j, this.a].Value = null;
+                    Tabl[j, this.a].Value = "";
                 }
             }
         }
@@ -52,7 +52,6 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 36;
         }
@@ -96,6 +95,7 @@ namespace WindowsFormsApplication1
         private void ОткрытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             m = 1;
+            missing_teachers.Text = null;
             this.input.Inp(this);
         }
 
@@ -111,24 +111,15 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// Метод восстановления по дням недели
-        /// </summary>
-        private void Vos()
-        {
-            for (int i = 0; i < 13; i++)
-            {
-                for (int j = this.c; j < this.b; j++)
-                {
-                    Tabl[i, j].Value = this.input.tab[j][i];
-                }
-            }
-        }
-
-        /// <summary>
         /// Объект класса Algoritm.
         /// </summary>
         private Algoritm alg = new Algoritm();
 
+        string[,] poned = new string[50, 50];
+        string[,] vtor = new string[50, 50];
+        string[,] sreda = new string[50, 50];
+        string[,] chetv = new string[50, 50];
+        string[,] pyat = new string[50, 50];
         /// <summary>
         /// Метод удаления по понедельникам
         /// </summary>
@@ -140,16 +131,23 @@ namespace WindowsFormsApplication1
             {
                 this.a = 1;
                 this.b = 8;
-                this.Ud();
-            }
-            else
-            {
                 for (int i = 0; i < 13; i++)
                 {
                     for (int j = 0; j < 8; j++)
                     {
+                        poned[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
+                this.Ud();
+            }
+            else
+            {
+                for (int i = 2; i < 13; i++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = poned[i, j];
                         else
                             return;
                     }
@@ -168,16 +166,23 @@ namespace WindowsFormsApplication1
             {
                 this.a = 8;
                 this.b = 15;
-                this.Ud();
-            }
-            else
-            {
                 for (int i = 0; i < 13; i++)
                 {
                     for (int j = 8; j < 15; j++)
                     {
+                        vtor[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
+                this.Ud();
+            }
+            else
+            {
+                for (int i = 2; i < 13; i++)
+                {
+                    for (int j = 8; j < 15; j++)
+                    {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = vtor[i,j];
                         else
                             return;
                     }
@@ -196,16 +201,23 @@ namespace WindowsFormsApplication1
             {
                 this.a = 15;
                 this.b = 22;
-                this.Ud();
-            }
-            else
-            {
                 for (int i = 0; i < 13; i++)
                 {
                     for (int j = 15; j < 22; j++)
                     {
+                        sreda[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
+                this.Ud();
+            }
+            else
+            {
+                for (int i = 2; i < 13; i++)
+                {
+                    for (int j = 15; j < 22; j++)
+                    {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value =sreda[i,j];
                         else
                             return;
                     }
@@ -224,16 +236,23 @@ namespace WindowsFormsApplication1
             {
                 this.a = 22;
                 this.b = 29;
-                this.Ud();
-            }
-            else
-            {
                 for (int i = 0; i < 13; i++)
                 {
                     for (int j = 22; j < 29; j++)
                     {
+                        chetv[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
+                this.Ud();
+            }
+            else
+            {
+                for (int i = 2; i < 13; i++)
+                {
+                    for (int j = 22; j < 29; j++)
+                    {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = chetv[i, j];
                         else
                             return;
                     }
@@ -252,16 +271,23 @@ namespace WindowsFormsApplication1
             {
                 this.a = 29;
                 this.b = 36;
-                this.Ud();
-            }
-            else
-            {
                 for (int i = 0; i < 13; i++)
                 {
                     for (int j = 29; j < 36; j++)
                     {
+                        pyat[i, j] = (string)(Tabl[i, j].Value);
+                    }
+                }
+                this.Ud();
+            }
+            else
+            {
+                for (int i = 2; i < 13; i++)
+                {
+                    for (int j = 29; j < 36; j++)
+                    {
                         if (m == 1)
-                            Tabl[i, j].Value = this.input.tab[j][i];
+                            Tabl[i, j].Value = pyat[i, j];
                         else
                             return;
                     }
@@ -300,37 +326,32 @@ namespace WindowsFormsApplication1
             Form2 secondForm = new Form2();
             secondForm.ShowDialog();
         }
-
-        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Метод сохранения расписания
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.InitialDirectory = "C:\tmp";
+            saveFileDialog1.InitialDirectory = "C:\tmp";                        //Открытия диалога для сохранения
             saveFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Excel.Application excelApp = new Excel.Application();
+                Excel.Application excelApp = new Excel.Application();           //Открытие экселя
                 excelApp.Visible = false;
-                excelApp.Workbooks.Add(Type.Missing);
+                excelApp.Workbooks.Open(@"C:\R.xlsx");                          // Путь к файлу шаблона
                 Excel.Worksheet workSheet = excelApp.ActiveSheet;
                 for (int i = 1; i < 36; i++)
-                    for (int j = 1; j < 13; j++)
+                    for (int j = 2; j < 13; j++)
                     {
-                        workSheet.Cells[i, j] = Tabl.Rows[i].Cells[j].Value;
+                        workSheet.Cells[i+1, j+1] = Tabl.Rows[i].Cells[j].Value;
                     }
                 string fileName = saveFileDialog1.FileName;
                 workSheet.SaveAs(fileName);
                  excelApp.Visible = true;
                  excelApp.Quit();
-                 GC.Collect();
-            
+                 GC.Collect();  
             }
-         
-
-
         }
     }
 }
