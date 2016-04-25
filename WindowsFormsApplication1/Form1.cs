@@ -341,6 +341,11 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void TablZnach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
         /// <summary>
         /// Метод сохранения расписания

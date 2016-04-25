@@ -103,7 +103,9 @@
             this.TablZnach.Location = new System.Drawing.Point(865, 207);
             this.TablZnach.Name = "TablZnach";
             this.TablZnach.Size = new System.Drawing.Size(121, 21);
+            this.TablZnach.Sorted = true;
             this.TablZnach.TabIndex = 7;
+            this.TablZnach.SelectedIndexChanged += new System.EventHandler(this.TablZnach_SelectedIndexChanged);
             this.TablZnach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tabl_znach_MouseDown);
             // 
             // del
@@ -248,9 +250,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(865, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 13);
+            this.label2.Size = new System.Drawing.Size(197, 13);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Выбери день недели для удаления";
+            this.label2.Text = "Выберите день недели для удаления:";
             // 
             // label1
             // 
@@ -266,7 +268,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(862, 338);
+            this.label3.Location = new System.Drawing.Point(862, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(240, 13);
             this.label3.TabIndex = 18;
