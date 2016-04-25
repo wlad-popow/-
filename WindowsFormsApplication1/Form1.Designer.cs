@@ -73,6 +73,7 @@
             this.Tabl.Name = "Tabl";
             this.Tabl.Size = new System.Drawing.Size(816, 413);
             this.Tabl.TabIndex = 0;
+            this.Tabl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tabl_CellContentClick);
             // 
             // Redaktor
             // 

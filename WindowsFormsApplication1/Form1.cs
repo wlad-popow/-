@@ -54,6 +54,10 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 36;
+            foreach (DataGridViewColumn column in Tabl.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         /// <summary>
@@ -330,6 +334,11 @@ namespace WindowsFormsApplication1
         {
             Form2 secondForm = new Form2();
             secondForm.ShowDialog();
+        }
+
+        private void Tabl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 
