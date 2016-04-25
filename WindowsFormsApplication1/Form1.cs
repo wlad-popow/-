@@ -94,6 +94,11 @@ namespace WindowsFormsApplication1
         /// <param name="e">хз 996</param>
         private void ОткрытьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
             m = 1;
             missing_teachers.Text = null;
             this.input.Inp(this);
@@ -326,6 +331,8 @@ namespace WindowsFormsApplication1
             Form2 secondForm = new Form2();
             secondForm.ShowDialog();
         }
+
+
         /// <summary>
         /// Метод сохранения расписания
         /// </summary>
