@@ -51,6 +51,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         public Form1()
         {
+
             InitializeComponent();
             Tabl.ColumnCount = 13;
             Tabl.RowCount = 36;
@@ -58,6 +59,56 @@ namespace WindowsFormsApplication1
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+            int rowCount;
+            int collumnCount;
+            string str;
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook book;
+            Microsoft.Office.Interop.Excel.Worksheet sheet;
+            Microsoft.Office.Interop.Excel.Range range;
+
+            book = excelApp.Workbooks.Open(@"C:\R.xlsx");
+            sheet = (Microsoft.Office.Interop.Excel.Worksheet)book.Worksheets.get_Item(1);
+            range = sheet.UsedRange;
+
+            for (rowCount = 1; rowCount <= range.Rows.Count; rowCount++)
+            {
+                input.tab.Add(new List<string>());
+                for (collumnCount = 1; collumnCount <= range.Columns.Count; collumnCount++)
+                {
+                    str = (string)(range.Cells[rowCount, collumnCount] as Microsoft.Office.Interop.Excel.Range).Text;
+                    input.tab[rowCount - 1].Add(str.Trim());
+                }
+            }
+
+            book.Close(true, null, null);
+            excelApp.Quit();
+            int x = 0, y = 0;
+            Tabl.RowCount = input.tab.Count;
+            foreach (List<string> i in input.tab)
+            {
+                Tabl.ColumnCount = i.Count;
+                foreach (string u in i)
+                {
+                    Tabl.Rows[x].Cells[y].Value = u;
+                    y++;
+                }
+
+                y = 0;
+                x++;
+            }
+            Tabl.Rows[0].Cells[2].ReadOnly = true;
+            Tabl.Rows[0].Cells[3].ReadOnly = true;
+            Tabl.Rows[0].Cells[4].ReadOnly = true;
+            Tabl.Rows[0].Cells[5].ReadOnly = true;
+            Tabl.Rows[0].Cells[6].ReadOnly = true;
+            Tabl.Rows[0].Cells[7].ReadOnly = true;
+            Tabl.Rows[0].Cells[8].ReadOnly = true;
+            Tabl.Rows[0].Cells[9].ReadOnly = true;
+            Tabl.Rows[0].Cells[10].ReadOnly = true;
+            Tabl.Rows[0].Cells[11].ReadOnly = true;
+            Tabl.Rows[0].Cells[12].ReadOnly = true;
+
         }
 
         /// <summary>
@@ -116,6 +167,45 @@ namespace WindowsFormsApplication1
         /// <param name="e">хз 4545125</param>
         private void ОткрытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int rowCount;
+            int collumnCount;
+            string str;
+            Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook book;
+            Microsoft.Office.Interop.Excel.Worksheet sheet;
+            Microsoft.Office.Interop.Excel.Range range;
+
+            book = excelApp.Workbooks.Open(@"C:\R.xlsx");
+            sheet = (Microsoft.Office.Interop.Excel.Worksheet)book.Worksheets.get_Item(1);
+            range = sheet.UsedRange;
+
+            for (rowCount = 1; rowCount <= range.Rows.Count; rowCount++)
+            {
+                input.tab.Add(new List<string>());
+                for (collumnCount = 1; collumnCount <= range.Columns.Count; collumnCount++)
+                {
+                    str = (string)(range.Cells[rowCount, collumnCount] as Microsoft.Office.Interop.Excel.Range).Text;
+                    input.tab[rowCount - 1].Add(str.Trim());
+                }
+            }
+
+            book.Close(true, null, null);
+            excelApp.Quit();
+            int x = 0, y = 0;
+            Tabl.RowCount = input.tab.Count;
+            foreach (List<string> i in input.tab)
+            {
+                Tabl.ColumnCount = i.Count;
+                foreach (string u in i)
+                {
+                    Tabl.Rows[x].Cells[y].Value = u;
+                    y++;
+                }
+
+                y = 0;
+                x++;
+            }
+        
             this.Toggle();
         }
 
@@ -342,6 +432,11 @@ namespace WindowsFormsApplication1
         }
 
         private void TablZnach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

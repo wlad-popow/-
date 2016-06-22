@@ -56,6 +56,8 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Tabl)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,16 +71,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tabl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Tabl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Tabl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.Tabl.Location = new System.Drawing.Point(12, 39);
             this.Tabl.Name = "Tabl";
-            this.Tabl.Size = new System.Drawing.Size(816, 413);
+            this.Tabl.Size = new System.Drawing.Size(881, 413);
             this.Tabl.TabIndex = 0;
             this.Tabl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tabl_CellContentClick);
             // 
             // Redaktor
             // 
             this.Redaktor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Redaktor.Location = new System.Drawing.Point(865, 267);
+            this.Redaktor.Location = new System.Drawing.Point(902, 267);
             this.Redaktor.Name = "Redaktor";
             this.Redaktor.Size = new System.Drawing.Size(254, 23);
             this.Redaktor.TabIndex = 3;
@@ -90,7 +95,7 @@
             // 
             this.missing_teachers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.missing_teachers.AutoSize = true;
-            this.missing_teachers.Location = new System.Drawing.Point(865, 366);
+            this.missing_teachers.Location = new System.Drawing.Point(902, 306);
             this.missing_teachers.Name = "missing_teachers";
             this.missing_teachers.Size = new System.Drawing.Size(0, 13);
             this.missing_teachers.TabIndex = 6;
@@ -100,7 +105,7 @@
             this.TablZnach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TablZnach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TablZnach.FormattingEnabled = true;
-            this.TablZnach.Location = new System.Drawing.Point(865, 207);
+            this.TablZnach.Location = new System.Drawing.Point(902, 207);
             this.TablZnach.Name = "TablZnach";
             this.TablZnach.Size = new System.Drawing.Size(121, 21);
             this.TablZnach.Sorted = true;
@@ -111,7 +116,7 @@
             // del
             // 
             this.del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.del.Location = new System.Drawing.Point(865, 234);
+            this.del.Location = new System.Drawing.Point(902, 234);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(121, 27);
             this.del.TabIndex = 8;
@@ -129,6 +134,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1163, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // файлToolStripMenuItem
             // 
@@ -143,21 +149,21 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem.Text = "Создать...";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem1
             // 
             this.открытьToolStripMenuItem1.Name = "открытьToolStripMenuItem1";
-            this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.открытьToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem1.Text = "Открыть...";
             this.открытьToolStripMenuItem1.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem1_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить...";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -188,7 +194,7 @@
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(868, 67);
+            this.checkBox1.Location = new System.Drawing.Point(905, 67);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(94, 17);
             this.checkBox1.TabIndex = 11;
@@ -200,7 +206,7 @@
             // 
             this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(868, 91);
+            this.checkBox2.Location = new System.Drawing.Point(905, 91);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(68, 17);
             this.checkBox2.TabIndex = 12;
@@ -212,7 +218,7 @@
             // 
             this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(868, 115);
+            this.checkBox3.Location = new System.Drawing.Point(905, 115);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(57, 17);
             this.checkBox3.TabIndex = 13;
@@ -224,7 +230,7 @@
             // 
             this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(868, 139);
+            this.checkBox4.Location = new System.Drawing.Point(905, 139);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(68, 17);
             this.checkBox4.TabIndex = 14;
@@ -236,7 +242,7 @@
             // 
             this.checkBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(868, 163);
+            this.checkBox5.Location = new System.Drawing.Point(905, 163);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(69, 17);
             this.checkBox5.TabIndex = 15;
@@ -248,7 +254,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(865, 48);
+            this.label2.Location = new System.Drawing.Point(902, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 13);
             this.label2.TabIndex = 16;
@@ -258,7 +264,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(865, 191);
+            this.label1.Location = new System.Drawing.Point(902, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 13);
             this.label1.TabIndex = 17;
@@ -268,11 +274,23 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(862, 293);
+            this.label3.Location = new System.Drawing.Point(899, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(240, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Список удаленных из расписания предметов:";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "День недели";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "№ урока";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Form1
             // 
@@ -333,5 +351,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
