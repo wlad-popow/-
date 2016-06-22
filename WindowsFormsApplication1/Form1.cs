@@ -353,5 +353,11 @@ namespace WindowsFormsApplication1
                  GC.Collect();  
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MailForm m = new MailForm();
+            m.Show();
+        }
     }
 }
