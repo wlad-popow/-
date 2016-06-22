@@ -354,10 +354,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void отправитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MailForm m = new MailForm();
-            m.Show();
+            m.ShowDialog(); ;
         }
     }
 }

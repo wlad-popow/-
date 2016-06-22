@@ -14,6 +14,9 @@ namespace WindowsFormsApplication1
 {
     public partial class MailForm : Form
     {
+        public static bool flag = false;
+       // private string filename;
+
         public MailForm()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             string smtp = "";
-            string file = "C:\\1.txt";
+            string from1, pass1, to1, tt, tema;
 
             if (smtpServer.SelectedIndex == 0)
             {
@@ -35,16 +38,55 @@ namespace WindowsFormsApplication1
                     smtp = "smtp.yandex.ru";
                 }
             }
+            from1 = from.Text;
+            pass1 = password.Text;
+            to1 = mailto.Text;
+            tema = caption.Text;
+            tt = message.Text;
             
-            MailMessage mail = new MailMessage("от кого", "кому", "Тема письма", "Тело письма");// в первых 2 параметрах должен быть емайл полностью типа : wlad-popow@mail.ru
+            MailMessage mail = new MailMessage(from1, to1, tema, tt);
             SmtpClient client = new SmtpClient(smtp);
             client.Port = 25;
-            client.Credentials = new System.Net.NetworkCredential("uzername", "password");// в первом параметре должено быть емайл полностью типа : wlad-popow@mail.ru и пароль от почты отправителя
+            client.Credentials = new System.Net.NetworkCredential(from1, pass1);
             client.EnableSsl = true;
 
-            mail.Attachments.Add(new Attachment("C:\\1.txt"));//путь к файлу...
+            string filename;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new
+                   System.IO.StreamReader(openFileDialog1.FileName);
+                filename = openFileDialog1.FileName;
+                sr.Close();
+            }
+            else
+            {
+                return;
+            }
+
+            Attachment attachData = new Attachment(filename);
+            mail.Attachments.Add(attachData);
             client.Send(mail);
-            MessageBox.Show("yes");
+             MessageBox.Show("Письмо отправлено");
+            this.Close();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+         /*   string filename;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Excel (*.XLS;*.XLSX)|*.XLS;*.XLSX";
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new
+                   System.IO.StreamReader(openFileDialog1.FileName);
+                filename = openFileDialog1.FileName;
+                sr.Close();
+            }
+            else
+            {
+                return;
+            }*/
         }
     }
 }

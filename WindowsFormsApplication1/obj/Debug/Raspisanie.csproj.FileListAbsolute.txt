@@ -91,3 +91,4 @@ C:\Users\Ragnareg\rasp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplicatio
 C:\Users\Ragnareg\rasp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Ragnareg\rasp\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
 C:\Users\Ragnareg\rasp\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MailForm.resources
+C:\Users\Zorik\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MailForm.resources
