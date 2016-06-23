@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1
         /// <param name="f">Главная форма программы</param>
         public void Spis(Form1 f)
         {
-            f.TablZnach.Items.Clear();
+           f.TablZnach.Items.Clear();
             foreach (string a in this.allLessons)
             {
                 f.TablZnach.Items.Add(a);
