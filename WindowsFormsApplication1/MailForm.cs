@@ -43,6 +43,7 @@ namespace WindowsFormsApplication1
             to1 = mailto.Text;
             tema = caption.Text;
             tt = message.Text;
+            ///
             
             MailMessage mail = new MailMessage(from1, to1, tema, tt);
             SmtpClient client = new SmtpClient(smtp);
