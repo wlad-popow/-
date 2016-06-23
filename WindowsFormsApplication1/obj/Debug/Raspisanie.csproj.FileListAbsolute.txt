@@ -101,3 +101,4 @@ C:\Users\Zorik\Desktop\Raspisanie-develop\WindowsFormsApplication1\obj\Debug\Win
 C:\Users\Zorik\Desktop\Raspisanie-develop\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form3.resources
 C:\Users\Zorik\Desktop\Raspisanie-develop\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Zorik\Desktop\Raspisanie-develop\WindowsFormsApplication1\obj\Debug\Raspisanie.csproj.GenerateResource.Cache
+C:\Users\Zorik\Desktop\Raspisanie\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MailForm.resources
